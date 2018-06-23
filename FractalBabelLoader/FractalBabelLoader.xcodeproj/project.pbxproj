@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D9BFE9520C28CB20079A9D1 /* babel.6.26.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 5D9BFE9420C28CB20079A9D1 /* babel.6.26.0.min.js */; };
+		5D9BFE9A20C296010079A9D1 /* BabelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE9920C296010079A9D1 /* BabelLoader.swift */; };
+		5D9BFE9C20C296F30079A9D1 /* BabelContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE9B20C296F30079A9D1 /* BabelContext.swift */; };
+		5D9BFE9E20C297160079A9D1 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE9D20C297160079A9D1 /* Error.swift */; };
+		5D9BFEA020C2978F0079A9D1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE9F20C2978F0079A9D1 /* Utils.swift */; };
+		5D9BFEA820C2B1610079A9D1 /* FractalEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9BFE9720C295BB0079A9D1 /* FractalEngine.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D9BFE8B20C28C6F0079A9D1 /* FractalBabelLoader.fractaloader */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FractalBabelLoader.fractaloader; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D9BFE8E20C28C6F0079A9D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D9BFE9420C28CB20079A9D1 /* babel.6.26.0.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = babel.6.26.0.min.js; sourceTree = "<group>"; };
+		5D9BFE9720C295BB0079A9D1 /* FractalEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FractalEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D9BFE9920C296010079A9D1 /* BabelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabelLoader.swift; sourceTree = "<group>"; };
+		5D9BFE9B20C296F30079A9D1 /* BabelContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabelContext.swift; sourceTree = "<group>"; };
+		5D9BFE9D20C297160079A9D1 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		5D9BFE9F20C2978F0079A9D1 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D9BFE8820C28C6F0079A9D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D9BFEA820C2B1610079A9D1 /* FractalEngine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D9BFE8220C28C6F0079A9D1 = {
+			isa = PBXGroup;
+			children = (
+				5D9BFE8D20C28C6F0079A9D1 /* FractalBabelLoader */,
+				5D9BFE8C20C28C6F0079A9D1 /* Products */,
+				5D9BFE9620C295BB0079A9D1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5D9BFE8C20C28C6F0079A9D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D9BFE8B20C28C6F0079A9D1 /* FractalBabelLoader.fractaloader */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D9BFE8D20C28C6F0079A9D1 /* FractalBabelLoader */ = {
+			isa = PBXGroup;
+			children = (
+				5D9BFE9920C296010079A9D1 /* BabelLoader.swift */,
+				5D9BFE9B20C296F30079A9D1 /* BabelContext.swift */,
+				5D9BFE9D20C297160079A9D1 /* Error.swift */,
+				5D9BFE9F20C2978F0079A9D1 /* Utils.swift */,
+				5D9BFE9420C28CB20079A9D1 /* babel.6.26.0.min.js */,
+				5D9BFE8E20C28C6F0079A9D1 /* Info.plist */,
+			);
+			path = FractalBabelLoader;
+			sourceTree = "<group>";
+		};
+		5D9BFE9620C295BB0079A9D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D9BFE9720C295BB0079A9D1 /* FractalEngine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D9BFE8A20C28C6F0079A9D1 /* FractalBabelLoader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D9BFE9120C28C6F0079A9D1 /* Build configuration list for PBXNativeTarget "FractalBabelLoader" */;
+			buildPhases = (
+				5D9BFE8720C28C6F0079A9D1 /* Sources */,
+				5D9BFE8820C28C6F0079A9D1 /* Frameworks */,
+				5D9BFE8920C28C6F0079A9D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FractalBabelLoader;
+			productName = FractalBabelLoader;
+			productReference = 5D9BFE8B20C28C6F0079A9D1 /* FractalBabelLoader.fractaloader */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D9BFE8320C28C6F0079A9D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Giuseppe Salvo";
+				TargetAttributes = {
+					5D9BFE8A20C28C6F0079A9D1 = {
+						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
+					};
+				};
+			};
+			buildConfigurationList = 5D9BFE8620C28C6F0079A9D1 /* Build configuration list for PBXProject "FractalBabelLoader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5D9BFE8220C28C6F0079A9D1;
+			productRefGroup = 5D9BFE8C20C28C6F0079A9D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D9BFE8A20C28C6F0079A9D1 /* FractalBabelLoader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D9BFE8920C28C6F0079A9D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D9BFE9520C28CB20079A9D1 /* babel.6.26.0.min.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D9BFE8720C28C6F0079A9D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D9BFE9C20C296F30079A9D1 /* BabelContext.swift in Sources */,
+				5D9BFE9E20C297160079A9D1 /* Error.swift in Sources */,
+				5D9BFE9A20C296010079A9D1 /* BabelLoader.swift in Sources */,
+				5D9BFEA020C2978F0079A9D1 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5D9BFE8F20C28C6F0079A9D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5D9BFE9020C28C6F0079A9D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		5D9BFE9220C28C6F0079A9D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PTUNQH4XK3;
+				INFOPLIST_FILE = FractalBabelLoader/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fractalapp.FractalBabelLoader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				WRAPPER_EXTENSION = fractaloader;
+			};
+			name = Debug;
+		};
+		5D9BFE9320C28C6F0079A9D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PTUNQH4XK3;
+				INFOPLIST_FILE = FractalBabelLoader/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fractalapp.FractalBabelLoader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				WRAPPER_EXTENSION = fractaloader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D9BFE8620C28C6F0079A9D1 /* Build configuration list for PBXProject "FractalBabelLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D9BFE8F20C28C6F0079A9D1 /* Debug */,
+				5D9BFE9020C28C6F0079A9D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D9BFE9120C28C6F0079A9D1 /* Build configuration list for PBXNativeTarget "FractalBabelLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D9BFE9220C28C6F0079A9D1 /* Debug */,
+				5D9BFE9320C28C6F0079A9D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D9BFE8320C28C6F0079A9D1 /* Project object */;
+}

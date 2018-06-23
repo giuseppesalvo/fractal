@@ -1,0 +1,48 @@
+Searching 342 files for "state.tabs.active" (regex)
+
+/Users/seth/Dropbox/xCode/owl/owl/Controllers/EditorController.swift:
+  106                                  print("focus: ", activeTab.name)
+  107                                  
+  108:                                 //guard let activeTab = mainStore.state.tabs.active else { return }
+  109                                  //mainStore.dispatch(TextTabDidChange(text: self.monacoEditor.text, tab: activeTab))
+  110                              }
+
+/Users/seth/Dropbox/xCode/owl/owl/Controllers/FilesController.swift:
+  146                  let tab = tabs[row]
+  147                  
+  148:                 cell.isActive = mainStore.state.tabs.active == tab
+  149                  
+  150                  let name = tab.name
+
+/Users/seth/Dropbox/xCode/owl/owl/Controllers/TabsController.swift:
+   60              }
+   61              
+   62:             if let activeTab = state.tabs.active {
+   63                  if activeTab.name != self.currentTab {
+   64                      shouldReload = true
+   ..
+  128  
+  129          collectionViewItem.resetState()
+  130:         if tab == mainStore.state.tabs.active {
+  131              collectionViewItem.addState(.active)
+  132          }
+
+/Users/seth/Dropbox/xCode/owl/owl/Store/Reducers/ProjectReducer.swift:
+   45          case let act as SelectTab:
+   46              guard let tab = newstate.tabs.core.instances.first(where: { $0.name == act.name }) else { break }
+   47:             if tab == newstate.tabs.active { break }
+   48              tab.editing = true
+   49:             newstate.tabs.active = tab
+   50              break
+   51          
+   ..
+   53              let tab = act.tab
+   54              tab.editing = false
+   55:             if tab == newstate.tabs.active {
+   56                  // Temporary, to improve this
+   57:                 newstate.tabs.active = newstate.tabs.core.instances.first
+   58:                 newstate.tabs.active?.editing = true
+   59              }
+   60              break
+
+9 matches across 4 files

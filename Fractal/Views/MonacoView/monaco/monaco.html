@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta charset="utf-8">
+    
+<script>
+window.onerror = function(message, source, lineno, colno, error) {
+    const data = {
+        message, source, lineno, colno, error
+    }
+    window.webkit.messageHandlers.onError.postMessage( JSON.stringify(data) )
+    
+    const div = document.createElement('div')
+    div.innerHTML = JSON.stringify(data)
+    document.body.appendChild(div)
+}
+</script>
+
+<title>Monaco</title>
+
+<link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+    
+<div id="container"></div>
+
+<script src="lib/loader.js"></script>
+
+<script>
+
+require.config({ paths: { 'vs': 'lib' }});
+
+require(['vs/editor/editor.main'], function() {
+
+    __DEFINE_THEMES__
+
+    var editor = monaco.editor.create(document.getElementById('container'), {
+        value: __INITIAL_CODE__,
+        language: 'javascript',
+        theme: __INITIAL_THEME__,
+        nativeContextMenu: true,
+        folding: true,
+        scrollbar: {
+          // Subtle shadows to the left & top. Defaults to true.
+          useShadows: false,
+          verticalScrollbarSize: 10,
+          horizontalScrollbarSize: 10,
+        }
+    })
+        
+    window.webkit.messageHandlers.textDidChange.postMessage(editor.getValue())
+
+    window.onresize = function () {
+        if (editor) {
+            editor.layout();
+        }
+    }
+
+    window.editorInstance = editor
+
+    window.editorInstance.onDidChangeModelContent(e => {
+        window.webkit.messageHandlers.textDidChange.postMessage(window.editorInstance.getValue())
+    })
+
+}, function(err) {
+    new Error('An error occurred while loading monaco editor', err)
+})
+
+function setText(text) {
+    window.editorInstance.setValue( text )
+}
+
+function setTheme(themeName) {
+    monaco.editor.setTheme(themeName)
+    //window.webkit.messageHandlers.themeDidChange.postMessage(themeName)
+    window.webkit.messageHandlers.onError.postMessage( themeName )
+}
+
+function getEditorState() {
+    return JSON.stringify(window.editorInstance.saveViewState())
+}
+
+function setEditorState(state) {
+    return window.editorInstance.restoreViewState( JSON.parse(state) )
+}
+
+</script>
+ 
+
+</body>
+</html>

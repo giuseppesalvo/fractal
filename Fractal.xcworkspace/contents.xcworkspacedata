@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Fractal.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FractalEngine/FractalEngine.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FractalRawLoader/FractalRawLoader.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FractalJsonLoader/FractalJsonLoader.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/../FractalBabelLoader/FractalBabelLoader.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

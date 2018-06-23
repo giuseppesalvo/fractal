@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <link rel="stylesheet" href="styles.css" />
+    
+    <style>
+        html, body {
+            background-color: __BACKGROUND_COLOR__!important;
+            height: 100%; width: 100%;
+            overflow: hidden;
+            border: 0px!important;
+        }
+    </style>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+
+    <script>
+
+        window.onerror = function (message, source, lineno, colno, error) {
+            const msg = typeof message === "string" ? message : JSON.stringify(message)
+
+            const data = {
+                message: msg,
+                source,
+                lineno,
+                colno,
+                error
+            }
+            
+            window.webkit.messageHandlers.onError.postMessage(JSON.stringify(data))
+        }
+
+        let console_error = console.error
+        console.error = function () {
+            const data = JSON.stringify(Array.from(arguments))
+            window.webkit.messageHandlers.onError.postMessage(JSON.stringify(data))
+            console_error(...arguments)
+        }
+        
+        let console_log = console.log
+        console.log = function () {
+            const data = JSON.stringify(Array.from(arguments))
+            window.webkit.messageHandlers.onLog.postMessage(JSON.stringify(data))
+            console_log(...arguments)
+        }
+        
+        let console_warning = console.warning
+        console.warning = function () {
+            const data = JSON.stringify(Array.from(arguments))
+            window.webkit.messageHandlers.onLog.postMessage(JSON.stringify(data))
+            console_warning(...arguments)
+        }
+
+    </script>
+
+    <title>Monaco</title>
+
+</head>
+
+<body>
+
+    <div id="container"></div>
+
+    <script src="vs/loader.js"></script>
+
+    <script>
+        
+        require.config({
+            paths: {
+                'vs': 'vs'
+            }
+        });
+
+        require(['vs/editor/editor.main'], function () {
+                
+            __THEMES__
+
+            const props = {
+                language: 'javascript',
+                nativeContextMenu: true,
+                folding: true,
+                theme: __INITIAL_THEME__,
+                fontFamily: 'Roboto Mono',
+                fontWeight: 400,
+                scrollbar: {
+                    // Subtle shadows to the left & top. Defaults to true.
+                    useShadows: false,
+                    verticalScrollbarSize: 10,
+                    horizontalScrollbarSize: 10,
+                }
+            }
+
+            window.monaco = monaco
+
+            var editor = monaco.editor.create(document.getElementById('container'), props)
+
+            window.onresize = function () {
+                if (editor) {
+                    editor.layout();
+                }
+            }
+
+            window.editorInstance = editor
+
+            window.editorInstance.onDidChangeModelContent(e => {
+                window.webkit.messageHandlers
+                .textDidChange
+                .postMessage({ text: window.editorInstance.getValue(), isUndo: e.isUndoing, isRedo: e.isRedoing })
+            })
+                
+            window.setEditorModel(__INITIAL_MODEL__, __INITIAL_VALUE__, __INITIAL_SYNTAX__)
+
+        }, function (err) {
+            new Error('An error occurred while loading monaco editor', err)
+        })
+
+        window.setText = function setText(text) {
+            window.editorInstance.setValue(text)
+        }
+
+        window.setTheme = function setTheme(themeName, backgroundColor) {
+            document.body.style.background = backgroundColor
+            document.documentElement.style.background = backgroundColor
+            monaco.editor.setTheme(themeName)
+            window.webkit.messageHandlers.themeDidChange.postMessage(themeName)
+            window.editorInstance.layout()
+        }
+    
+        window.disposeEditorModel = function disposeEditorModel(id) {
+            let model = monaco.editor.getModel(id)
+            if ( model && !model.isDisposed() ) {
+                model.dispose()
+            }
+        }
+
+        window.setEditorModel = function setEditorModel(id, content = "", syntax = "") {
+            let model = monaco.editor.getModel(id)
+            if ( ! model || model.isDisposed() ) {
+                model = monaco.editor.createModel(content, syntax, id)
+            }
+            window.editorInstance.setModel(model)
+        }
+
+        window.getEditorState = function getEditorState() {
+            return JSON.stringify(window.editorInstance.saveViewState())
+        }
+
+        window.setEditorStateFromJSONString = function setEditorStateFromJSONString(state) {
+            try {
+                const parsed = JSON.parse(state)
+                if (parsed) {
+                    return window.editorInstance.restoreViewState(parsed)
+                }
+            } catch (err) {
+                console.log("error while parsing json state")
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

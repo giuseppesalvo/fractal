@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+    {
+      "name" : "Witness",
+      "hash" : "1ad96cb453209c1f1ebe656ccf720a2160c1695ded1249d4d2a4c0ab4fbc0728"
+    }
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "0.1.3",
+  "iOS" : [
+
+  ]
+}

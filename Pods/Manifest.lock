@@ -1,0 +1,42 @@
+PODS:
+  - LetsMove (1.24)
+  - PromiseKit (6.3.3):
+    - PromiseKit/CorePromise (= 6.3.3)
+    - PromiseKit/Foundation (= 6.3.3)
+    - PromiseKit/UIKit (= 6.3.3)
+  - PromiseKit/CorePromise (6.3.3)
+  - PromiseKit/Foundation (6.3.3):
+    - PromiseKit/CorePromise
+  - ReSwift (4.0.1)
+  - Sparkle (1.19.0)
+  - SwiftLint (0.25.1)
+  - Zip (1.1.0)
+
+DEPENDENCIES:
+  - LetsMove
+  - PromiseKit
+  - ReSwift
+  - Sparkle
+  - SwiftLint
+  - Zip
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - LetsMove
+    - PromiseKit
+    - ReSwift
+    - Sparkle
+    - SwiftLint
+    - Zip
+
+SPEC CHECKSUMS:
+  LetsMove: fefe56bc7bc7fb7d37049e28a14f297961229fc5
+  PromiseKit: e168626994ae29c38b51252a8d1b0a561fd3f2c7
+  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
+  Sparkle: 8486d2493599665e466b5076e72b28849776e32f
+  SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
+  Zip: 8877eede3dda76bcac281225c20e71c25270774c
+
+PODFILE CHECKSUM: 62c1f8723b1d6b9518b56324885f2efa9f2ba9cc
+
+COCOAPODS: 1.5.3

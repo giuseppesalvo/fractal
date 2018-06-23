@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TabsCollectionItem" customModule="Fractal" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY" customClass="NSViewBordable" customModule="Fractal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="88" height="32"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MNH-nf-WxO">
+                    <rect key="frame" x="18" y="8" width="52" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="kWa-kt-wmN"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="I2s-Us-XWH">
+                        <font key="font" size="10" name="Roboto-Regular"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BEg-3n-Kfe">
+                    <rect key="frame" x="72" y="13" width="6" height="6"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="6" id="0xu-7t-lDX"/>
+                        <constraint firstAttribute="width" constant="6" id="qh5-Js-5y1"/>
+                    </constraints>
+                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="close" imagePosition="only" alignment="center" alternateImage="close" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="Hg9-wu-dHJ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="closeTab:" target="Wy4-OS-nl3" id="QQ3-29-9pl"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="BEg-3n-Kfe" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="JVA-MF-vFx"/>
+                <constraint firstAttribute="trailing" secondItem="MNH-nf-WxO" secondAttribute="trailing" constant="20" id="avL-Nb-2RW"/>
+                <constraint firstAttribute="trailing" secondItem="BEg-3n-Kfe" secondAttribute="trailing" constant="10" id="dHR-Fm-IyS"/>
+                <constraint firstItem="MNH-nf-WxO" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="gWy-8m-Bd6"/>
+                <constraint firstItem="MNH-nf-WxO" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="o19-Zf-Lti"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="120"/>
+        </customView>
+        <collectionViewItem id="Wy4-OS-nl3" customClass="TabsCollectionItem" customModule="Fractal" customModuleProvider="target">
+            <connections>
+                <outlet property="closeBtn" destination="BEg-3n-Kfe" id="9Bb-54-JCc"/>
+                <outlet property="tabName" destination="MNH-nf-WxO" id="DNC-19-yqj"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="35A-Il-ed8"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+    <resources>
+        <image name="close" width="64" height="64"/>
+    </resources>
+</document>

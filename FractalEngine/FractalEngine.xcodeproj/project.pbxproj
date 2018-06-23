@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D565FB720C314CD00EBF958 /* RegExp+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D565FB620C314CD00EBF958 /* RegExp+Additions.swift */; };
+		5D565FB920C3150100EBF958 /* EngineLoaderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D565FB820C3150100EBF958 /* EngineLoaderSettings.swift */; };
+		5D639C5620C1CC7800FEC8A1 /* bundle_template.js in Resources */ = {isa = PBXBuildFile; fileRef = 5D639C5520C1CC7800FEC8A1 /* bundle_template.js */; };
+		5D9BFE6920C283780079A9D1 /* EngineLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE6820C283780079A9D1 /* EngineLoader.swift */; };
+		5D9BFE6B20C283910079A9D1 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE6A20C283910079A9D1 /* String+Additions.swift */; };
+		5D9BFE6D20C283BA0079A9D1 /* EngineSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE6C20C283BA0079A9D1 /* EngineSettings.swift */; };
+		5D9BFE6F20C283C60079A9D1 /* EngineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE6E20C283C60079A9D1 /* EngineError.swift */; };
+		5D9BFEAA20C2BB770079A9D1 /* testproject in Resources */ = {isa = PBXBuildFile; fileRef = 5D9BFEA920C2BB770079A9D1 /* testproject */; };
+		5DFCDD8B20C1AD100063783C /* FractalEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFCDD8120C1AD0F0063783C /* FractalEngine.framework */; };
+		5DFCDD9020C1AD100063783C /* FractalEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFCDD8F20C1AD100063783C /* FractalEngineTests.swift */; };
+		5DFCDD9220C1AD100063783C /* FractalEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DFCDD8420C1AD0F0063783C /* FractalEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DFCDD9C20C1AD1C0063783C /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFCDD9B20C1AD1C0063783C /* Engine.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5DFCDD8C20C1AD100063783C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DFCDD7820C1AD0F0063783C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DFCDD8020C1AD0F0063783C;
+			remoteInfo = FractalEngine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5D565FB620C314CD00EBF958 /* RegExp+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegExp+Additions.swift"; sourceTree = "<group>"; };
+		5D565FB820C3150100EBF958 /* EngineLoaderSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineLoaderSettings.swift; sourceTree = "<group>"; };
+		5D639C5520C1CC7800FEC8A1 /* bundle_template.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle_template.js; sourceTree = "<group>"; };
+		5D9BFE6820C283780079A9D1 /* EngineLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineLoader.swift; sourceTree = "<group>"; };
+		5D9BFE6A20C283910079A9D1 /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
+		5D9BFE6C20C283BA0079A9D1 /* EngineSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineSettings.swift; sourceTree = "<group>"; };
+		5D9BFE6E20C283C60079A9D1 /* EngineError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineError.swift; sourceTree = "<group>"; };
+		5D9BFEA920C2BB770079A9D1 /* testproject */ = {isa = PBXFileReference; lastKnownFileType = folder; path = testproject; sourceTree = "<group>"; };
+		5DFCDD8120C1AD0F0063783C /* FractalEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FractalEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DFCDD8420C1AD0F0063783C /* FractalEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FractalEngine.h; sourceTree = "<group>"; };
+		5DFCDD8520C1AD0F0063783C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DFCDD8A20C1AD0F0063783C /* FractalEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FractalEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DFCDD8F20C1AD100063783C /* FractalEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalEngineTests.swift; sourceTree = "<group>"; };
+		5DFCDD9120C1AD100063783C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DFCDD9B20C1AD1C0063783C /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DFCDD7D20C1AD0F0063783C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DFCDD8720C1AD0F0063783C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DFCDD8B20C1AD100063783C /* FractalEngine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DFCDD7720C1AD0F0063783C = {
+			isa = PBXGroup;
+			children = (
+				5DFCDD8320C1AD0F0063783C /* FractalEngine */,
+				5DFCDD8E20C1AD100063783C /* FractalEngineTests */,
+				5DFCDD8220C1AD0F0063783C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5DFCDD8220C1AD0F0063783C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DFCDD8120C1AD0F0063783C /* FractalEngine.framework */,
+				5DFCDD8A20C1AD0F0063783C /* FractalEngineTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DFCDD8320C1AD0F0063783C /* FractalEngine */ = {
+			isa = PBXGroup;
+			children = (
+				5DFCDD8420C1AD0F0063783C /* FractalEngine.h */,
+				5DFCDD9B20C1AD1C0063783C /* Engine.swift */,
+				5D9BFE6820C283780079A9D1 /* EngineLoader.swift */,
+				5D9BFE6C20C283BA0079A9D1 /* EngineSettings.swift */,
+				5D565FB820C3150100EBF958 /* EngineLoaderSettings.swift */,
+				5D9BFE6E20C283C60079A9D1 /* EngineError.swift */,
+				5D9BFE6A20C283910079A9D1 /* String+Additions.swift */,
+				5D565FB620C314CD00EBF958 /* RegExp+Additions.swift */,
+				5D639C5520C1CC7800FEC8A1 /* bundle_template.js */,
+				5DFCDD8520C1AD0F0063783C /* Info.plist */,
+			);
+			path = FractalEngine;
+			sourceTree = "<group>";
+		};
+		5DFCDD8E20C1AD100063783C /* FractalEngineTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D9BFEA920C2BB770079A9D1 /* testproject */,
+				5DFCDD8F20C1AD100063783C /* FractalEngineTests.swift */,
+				5DFCDD9120C1AD100063783C /* Info.plist */,
+			);
+			path = FractalEngineTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5DFCDD7E20C1AD0F0063783C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DFCDD9220C1AD100063783C /* FractalEngine.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5DFCDD8020C1AD0F0063783C /* FractalEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DFCDD9520C1AD100063783C /* Build configuration list for PBXNativeTarget "FractalEngine" */;
+			buildPhases = (
+				5DFCDD7C20C1AD0F0063783C /* Sources */,
+				5DFCDD7D20C1AD0F0063783C /* Frameworks */,
+				5DFCDD7E20C1AD0F0063783C /* Headers */,
+				5DFCDD7F20C1AD0F0063783C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FractalEngine;
+			productName = FractalEngine;
+			productReference = 5DFCDD8120C1AD0F0063783C /* FractalEngine.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5DFCDD8920C1AD0F0063783C /* FractalEngineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DFCDD9820C1AD100063783C /* Build configuration list for PBXNativeTarget "FractalEngineTests" */;
+			buildPhases = (
+				5DFCDD8620C1AD0F0063783C /* Sources */,
+				5DFCDD8720C1AD0F0063783C /* Frameworks */,
+				5DFCDD8820C1AD0F0063783C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DFCDD8D20C1AD100063783C /* PBXTargetDependency */,
+			);
+			name = FractalEngineTests;
+			productName = FractalEngineTests;
+			productReference = 5DFCDD8A20C1AD0F0063783C /* FractalEngineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DFCDD7820C1AD0F0063783C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Giuseppe Salvo";
+				TargetAttributes = {
+					5DFCDD8020C1AD0F0063783C = {
+						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
+					};
+					5DFCDD8920C1AD0F0063783C = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 5DFCDD7B20C1AD0F0063783C /* Build configuration list for PBXProject "FractalEngine" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5DFCDD7720C1AD0F0063783C;
+			productRefGroup = 5DFCDD8220C1AD0F0063783C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DFCDD8020C1AD0F0063783C /* FractalEngine */,
+				5DFCDD8920C1AD0F0063783C /* FractalEngineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DFCDD7F20C1AD0F0063783C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D639C5620C1CC7800FEC8A1 /* bundle_template.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DFCDD8820C1AD0F0063783C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D9BFEAA20C2BB770079A9D1 /* testproject in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DFCDD7C20C1AD0F0063783C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D565FB720C314CD00EBF958 /* RegExp+Additions.swift in Sources */,
+				5D565FB920C3150100EBF958 /* EngineLoaderSettings.swift in Sources */,
+				5D9BFE6920C283780079A9D1 /* EngineLoader.swift in Sources */,
+				5D9BFE6F20C283C60079A9D1 /* EngineError.swift in Sources */,
+				5D9BFE6B20C283910079A9D1 /* String+Additions.swift in Sources */,
+				5D9BFE6D20C283BA0079A9D1 /* EngineSettings.swift in Sources */,
+				5DFCDD9C20C1AD1C0063783C /* Engine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DFCDD8620C1AD0F0063783C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DFCDD9020C1AD100063783C /* FractalEngineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DFCDD8D20C1AD100063783C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DFCDD8020C1AD0F0063783C /* FractalEngine */;
+			targetProxy = 5DFCDD8C20C1AD100063783C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5DFCDD9320C1AD100063783C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5DFCDD9420C1AD100063783C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5DFCDD9620C1AD100063783C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PTUNQH4XK3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = FractalEngine/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fractalapp.FractalEngine;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		5DFCDD9720C1AD100063783C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PTUNQH4XK3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = FractalEngine/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fractalapp.FractalEngine;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		5DFCDD9920C1AD100063783C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PTUNQH4XK3;
+				INFOPLIST_FILE = FractalEngineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fractalapp.FractalEngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		5DFCDD9A20C1AD100063783C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PTUNQH4XK3;
+				INFOPLIST_FILE = FractalEngineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fractalapp.FractalEngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DFCDD7B20C1AD0F0063783C /* Build configuration list for PBXProject "FractalEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DFCDD9320C1AD100063783C /* Debug */,
+				5DFCDD9420C1AD100063783C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DFCDD9520C1AD100063783C /* Build configuration list for PBXNativeTarget "FractalEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DFCDD9620C1AD100063783C /* Debug */,
+				5DFCDD9720C1AD100063783C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DFCDD9820C1AD100063783C /* Build configuration list for PBXNativeTarget "FractalEngineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DFCDD9920C1AD100063783C /* Debug */,
+				5DFCDD9A20C1AD100063783C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DFCDD7820C1AD0F0063783C /* Project object */;
+}
