@@ -1,5 +1,7 @@
 #  Fractal App
 
+[download](https://github.com/FractalApp/fractal/raw/master/build/Fractal-v0.0.1-b2.zip)
+
 0.0.1 alpha
 
 🔥 Make Javascript and WebGL prototypes with ease, without thinking about webpack, babel, folder structure etc.
