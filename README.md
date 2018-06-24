@@ -4,7 +4,7 @@
 
 0.0.1 alpha
 
-🔥 Make Javascript and WebGL prototypes with ease, without thinking about webpack, babel, folder structure etc.
+🔥 Make Javascript WebGL/canvas prototypes with ease, without thinking about webpack, babel, folder structure etc.
 
 Fractal is a macOS app that will help you make Javascript WebGL/canvas prototypes and share them without thinking about all the tools around the modern frontend workflow, just open the app and start to code.
 
