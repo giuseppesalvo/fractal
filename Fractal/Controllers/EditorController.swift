@@ -47,7 +47,8 @@ class EditorController: NSViewController {
 func getSyntaxByExtension(ext: String) -> String? {
     var dict = [
         "js": "javascript",
-        "json": "json"
+        "json": "json",
+        "glsl": "cpp"
     ]
     
     return dict[ext]
