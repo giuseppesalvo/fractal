@@ -23,12 +23,10 @@ Fractal is tough to work principally with the canvas, to unleash your imaginatio
 - Choose a template
 - Unleash your imagination
 
-#### Info
+#### Notes:
 - **Tabs:** Every file you can edit is a tab. The tab with a point on the left is the main entry ( the first file that will be executed )
 - **Libraries:** Javascript libraries that will be added to the html document as a script tag
 - **Resources:** The files that you need to use, such as images. You can find them under the "/resources" path -> "/resources/yourimage.png"
-
-#### Notes:
 - You can use import, export, require
 - Webpack specific reatures are not supported, like require.ensure
 
