@@ -1,6 +1,6 @@
 #  Fractal App
 
-[download](https://fractalapp-9641c.firebaseapp.com/updates/Fractal-v0.0.0.1-b2.zip)
+[download](https://github.com/FractalApp/fractal/raw/master/build/Fractal-v0.0.1-b2.zip)
 
 0.0.1 alpha
 
