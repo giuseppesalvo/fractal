@@ -88,6 +88,14 @@ public extension MonacoView {
         self.loadEditor()
     }
     
+    func cleanString(str: String) -> String {
+        return str.replacingOccurrences(of: "`", with: "\\`")
+    }
+    
+    func toJavascriptString(_ value: String) -> String {
+        return "`\(cleanString(str: value))`"
+    }
+    
     private func loadEditor() {
         let baseURL = Path.html.deletingLastPathComponent()
         
@@ -96,10 +104,10 @@ public extension MonacoView {
         
         let html = content
             .replacingOccurrences(of: "__BACKGROUND_COLOR__", with: self.editorBackgroundColor)
-            .replacingOccurrences(of: "__INITIAL_VALUE__", with: "`\(self.text)`")
-            .replacingOccurrences(of: "__INITIAL_MODEL__", with: "`\(self.model)`")
-            .replacingOccurrences(of: "__INITIAL_THEME__", with: "`\(self.theme)`")
-            .replacingOccurrences(of: "__INITIAL_SYNTAX__", with: "`\(self.syntax)`")
+            .replacingOccurrences(of: "__INITIAL_VALUE__", with: toJavascriptString(self.text) )
+            .replacingOccurrences(of: "__INITIAL_MODEL__", with: toJavascriptString(self.model))
+            .replacingOccurrences(of: "__INITIAL_THEME__", with: toJavascriptString(self.theme))
+            .replacingOccurrences(of: "__INITIAL_SYNTAX__", with: toJavascriptString(self.syntax))
             .replacingOccurrences(of: "__THEMES__"       , with: MonacoTheme.serializeThemes(self.themes))
         
         self.monacoWebView?.loadHTMLString(html, baseURL: baseURL)
@@ -116,7 +124,7 @@ public extension MonacoView {
 public extension MonacoView {
     
     public func setText(_ text: String, completition: ((_ error:Error?) -> Void)? = nil ) {
-        let code  = "\(JSFunc.setText)(`\(text)`)"
+        let code  = toJavascriptFunc(fn: JSFunc.setText, arguments: text)
         self.text = text
         
         self.monacoWebView?.evaluateJavaScript(code) { (_, error) in
@@ -157,7 +165,7 @@ public extension MonacoView {
     }
     
     public func setEditorState(state: String)  -> Promise<Void> {
-        let code = "\(JSFunc.setEditorState)(`\(state)`)"
+        let code = toJavascriptFunc(fn: JSFunc.setEditorState, arguments: state)
         
         return Promise<Void> { seal in
             self.monacoWebView?.evaluateJavaScript(code) { (_, error) in
@@ -166,8 +174,22 @@ public extension MonacoView {
         }
     }
     
+    func toJavascriptFunc( fn: String, arguments: [String] = []) -> String {
+        let fixed = arguments.map { toJavascriptString($0) }
+        return fn + "(" + fixed.joined(separator: ",") + ")"
+    }
+    
+    func toJavascriptFunc( fn: String, arguments: String ) -> String {
+        return toJavascriptFunc(fn: fn, arguments: [arguments])
+    }
+    
     public func setEditorModel(id idValue: String, defaultText: String, syntax: String) -> Promise<Void> {
-        let code = "\(JSFunc.setEditorModel)(`\(idValue)`, `\(defaultText)`, `\(syntax)`)"
+
+        let code = toJavascriptFunc(fn: JSFunc.setEditorModel, arguments: [
+            idValue,
+            defaultText,
+            syntax
+        ])
         
         self.model  = idValue
         self.syntax = syntax
@@ -180,7 +202,7 @@ public extension MonacoView {
     }
     
     public func disposeEditorModel(id idValue: String) -> Promise<Void> {
-        let code = "\(JSFunc.disposeEditorModel)(`\(idValue)`)"
+        let code = toJavascriptFunc(fn: JSFunc.disposeEditorModel, arguments: idValue)
         
         return Promise<Void> { seal in
             self.monacoWebView?.evaluateJavaScript(code) { (_, error) in

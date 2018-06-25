@@ -104,6 +104,8 @@
             }
 
             window.editorInstance = editor
+                
+            window.setEditorModel(__INITIAL_MODEL__, __INITIAL_VALUE__, __INITIAL_SYNTAX__)
 
             window.editorInstance.onDidChangeModelContent(e => {
                 window.webkit.messageHandlers
@@ -111,7 +113,10 @@
                 .postMessage({ text: window.editorInstance.getValue(), isUndo: e.isUndoing, isRedo: e.isRedoing })
             })
                 
-            window.setEditorModel(__INITIAL_MODEL__, __INITIAL_VALUE__, __INITIAL_SYNTAX__)
+            window.editorInstance.onDidChangeModelContent(e => {
+                window.webkit.messageHandlers.modelDidChange
+                .postMessage({ text: window.editorInstance.getModel().uri })
+            })
 
         }, function (err) {
             new Error('An error occurred while loading monaco editor', err)

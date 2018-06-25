@@ -19,13 +19,15 @@ public extension MonacoView {
     }
     
     struct Handler {
-        static var textDidChange  = "textDidChange"
-        static let themeDidChange = "themeDidChange"
-        static let error          = "onError"
-        static let log            = "onLog"
+        static var textDidChange   = "textDidChange"
+        static var modelDidChange  = "modelDidChange"
+        static let themeDidChange  = "themeDidChange"
+        static let error           = "onError"
+        static let log             = "onLog"
         
         static let allValues = [
             Handler.textDidChange,
+            Handler.modelDidChange,
             Handler.themeDidChange,
             Handler.error,
             Handler.log
