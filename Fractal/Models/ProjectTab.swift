@@ -7,21 +7,16 @@
 import Cocoa
 import Foundation
 
-class ProjectTab: Equatable, Hashable {
+class ProjectTab: NSObject, NSCopying {
     
     let id       : String
     var name     : String
     var content  : String { didSet { isSaved = false } }
     var state    : String
-    
     var ext      : String
     let basePath : String
     
     var isSaved  : Bool = false
-    
-    var hashValue: Int {
-        return id.hashValue
-    }
     
     var fullName: String {
         return name + "." + ext
@@ -31,6 +26,15 @@ class ProjectTab: Equatable, Hashable {
         return basePath + "/" + fullName
     }
 
+    init( id: String, name: String, content: String = "", state: String, ext: String, basePath: String ) {
+        self.name     = name
+        self.content  = content
+        self.state    = state
+        self.ext      = ext
+        self.basePath = basePath
+        self.id       = id
+    }
+    
     init( name: String, content: String = "", ext: String, basePath: String ) {
         self.name     = name
         self.content  = content
@@ -119,7 +123,7 @@ class ProjectTab: Equatable, Hashable {
         return tabs
     }
     
-    static func == (lhs: ProjectTab, rhs: ProjectTab) -> Bool {
-        return lhs.hashValue == rhs.hashValue
+    func copy(with zone: NSZone? = nil) -> Any {
+        return ProjectTab(id: id, name: name, content: content, state: state, ext: ext, basePath: basePath)
     }
 }

@@ -29,7 +29,8 @@ struct SetMainTab: Action {
 }
 
 struct CloseTab: Action {
-    let tab: ProjectTab
+    let name : String
+    let ext  : String
 }
 
 struct DeleteTab: Action {

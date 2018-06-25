@@ -14,7 +14,7 @@ class TabsController: NSViewController {
 
     var activeTab    : ProjectTab?
     var mainTab      : ProjectTab?
-    var tabs         : [ProjectTab] = []
+    var tabs         : [TabsCollectionModel] = []
     var dragItems    : Set<IndexPath> = []
     
     override func viewDidLoad() {

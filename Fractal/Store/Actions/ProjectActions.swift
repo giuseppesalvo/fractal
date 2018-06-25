@@ -130,6 +130,7 @@ func RunProject() -> Store<State>.AsyncActionCreator {
     return { state, store, callback in
         
         queue.async {
+            store.dispatch(StopCurrentBuild())
             store.dispatch(StartBuilding())
             store.dispatch(WriteTabs())
             store.dispatch(ClearConsole())

@@ -8,6 +8,15 @@ import Cocoa
 
 // swiftlint:disable force_cast
 
+struct TabsCollectionModel {
+    let id       : String
+    let name     : String
+    let ext      : String
+    var fullName : String {
+        return name + "." + ext
+    }
+}
+
 extension TabsController: NSCollectionViewDelegate, NSCollectionViewDataSource, NSCollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -26,11 +35,11 @@ extension TabsController: NSCollectionViewDelegate, NSCollectionViewDataSource, 
         
         collectionViewItem.resetState()
         
-        if tab == self.activeTab {
+        if tab.id == self.activeTab?.id {
             collectionViewItem.addState(.active)
         }
         
-        if tab == self.mainTab {
+        if tab.id == self.mainTab?.id {
             collectionViewItem.addState(.main)
         }
         
@@ -183,7 +192,7 @@ extension TabsController: TabsCollectionItemDelegate {
         if let index = tabsCollectionView.indexPath(for: cell)?.item,
            tabs.indices.contains(index) {
             let tab = self.tabs[index]
-            store.dispatch(CloseTab(tab: tab))
+            store.dispatch(CloseTab(name: tab.name, ext: tab.ext))
         }
     }
 }

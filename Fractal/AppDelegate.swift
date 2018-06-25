@@ -132,7 +132,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     @IBAction func closeWindow(_ sender: Any) {
         if NSApp.mainWindow?.identifier?.rawValue != ElementId.PreviewWindow,
             let activeTab = currentStore?.state.project.tabs.active {
-            currentStore?.dispatch( CloseTab(tab: activeTab) )
+            currentStore?.dispatch( CloseTab(name: activeTab.name, ext: activeTab.ext) )
         } else {
             NSApp.mainWindow?.performClose(sender)
         }

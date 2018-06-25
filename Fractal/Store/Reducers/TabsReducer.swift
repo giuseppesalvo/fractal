@@ -165,7 +165,9 @@ struct TabsReducer {
     }
     
     func closeTab(_ act: CloseTab, state: TabsState) -> TabsState {
-        let tab = act.tab
+        guard let tab = state.instances.first(where: {
+            $0.name == act.name && $0.ext == act.ext
+        }) else { return state }
         
         guard let index = state.editing.index(of: tab) else {
             // this should never happen

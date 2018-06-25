@@ -19,14 +19,28 @@ extension TabsController: StoreSubscriber {
         store.unsubscribe(self)
     }
     
+    func shouldReloadTabsCollectionModel(state: [ProjectTab]) -> Bool {
+        if state.count != tabs.count { return true }
+        
+        var different = false
+        
+        for (index, tab) in state.enumerated() {
+            if tab.fullName != tabs[index].fullName {
+                different = true
+            }
+        }
+        
+        return different
+    }
+    
     func newState(state: TabsState) {
         
         DispatchQueue.main.async {
-            var shouldReload = true
+            var shouldReload = false
             
-            if state.editing != self.tabs {
+            if self.shouldReloadTabsCollectionModel(state: state.editing) {
+                self.tabs = state.editing.map { TabsCollectionModel(id: $0.id, name: $0.name, ext: $0.ext) }
                 shouldReload = true
-                self.tabs = state.editing
             }
             
             if let tab = state.active {
@@ -42,6 +56,8 @@ extension TabsController: StoreSubscriber {
                     self.mainTab = tab
                 }
             }
+            
+            print("should reload", shouldReload)
             
             // After the drag the collection is always reloaded, so we can wait the drag end
             if shouldReload && self.dragItems.count == 0 {
