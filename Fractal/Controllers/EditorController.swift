@@ -48,7 +48,9 @@ func getSyntaxByExtension(ext: String) -> String? {
     var dict = [
         "js": "javascript",
         "json": "json",
-        "glsl": "cpp"
+        "glsl": "c",
+        "frag": "c",
+        "vert": "c"
     ]
     
     return dict[ext]
