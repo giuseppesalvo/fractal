@@ -104,11 +104,11 @@ public extension MonacoView {
         
         let html = content
             .replacingOccurrences(of: "__BACKGROUND_COLOR__", with: self.editorBackgroundColor)
-            .replacingOccurrences(of: "__INITIAL_VALUE__", with: toJavascriptString(self.text) )
-            .replacingOccurrences(of: "__INITIAL_MODEL__", with: toJavascriptString(self.model))
-            .replacingOccurrences(of: "__INITIAL_THEME__", with: toJavascriptString(self.theme))
-            .replacingOccurrences(of: "__INITIAL_SYNTAX__", with: toJavascriptString(self.syntax))
-            .replacingOccurrences(of: "__THEMES__"       , with: MonacoTheme.serializeThemes(self.themes))
+            .replacingOccurrences(of: "__INITIAL_VALUE__"   , with: toJavascriptString(self.text) )
+            .replacingOccurrences(of: "__INITIAL_MODEL__"   , with: toJavascriptString(self.model))
+            .replacingOccurrences(of: "__INITIAL_THEME__"   , with: toJavascriptString(self.theme))
+            .replacingOccurrences(of: "__INITIAL_SYNTAX__"  , with: toJavascriptString(self.syntax))
+            .replacingOccurrences(of: "__THEMES__"          , with: MonacoTheme.serializeThemes(self.themes))
         
         self.monacoWebView?.loadHTMLString(html, baseURL: baseURL)
     }

@@ -28,8 +28,13 @@
                     evaluated: false,
                     exports: {},
                 }
-
-                eval(`(function(module, exports){ ${content} })(local, local.exports)`)
+ 
+                try {
+                    eval(`(function(module, exports){ ${content} })(local, local.exports)\n\n//# sourceURL=${name}`)
+                } catch(err) {
+                    err.source = name
+                    throw err
+                }
  
                 evaluated[name] = local
                 evaluated[name].evaluated = true

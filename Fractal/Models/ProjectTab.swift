@@ -54,8 +54,13 @@ class ProjectTab: Equatable, Hashable {
     func save() {
         if isSaved { return }
         
+        let cleaned = content
+            .replacingOccurrences(of: "\\r", with: "\\\\r")
+            .replacingOccurrences(of: "\\t", with: "\\\\t")
+            .replacingOccurrences(of: "\\n", with: "\\\\n")
+        
         FileManager.default.createFile(
-            atPath: path, contents: content.data(using: .utf8), attributes: nil
+            atPath: path, contents: cleaned.data(using: .utf8), attributes: nil
         )
         
         isSaved = true

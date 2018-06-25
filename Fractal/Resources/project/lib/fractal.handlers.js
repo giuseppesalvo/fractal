@@ -3,13 +3,13 @@
  * Handler: onConsoleLog
  */
 
-window.onerror = function (message, source, lineno, colno, error) {
+window.onerror = function (message, source, lineno, colno, err) {
     const data = {
-        message,
-        source,
-        lineno,
-        colno,
-        error
+        message: err.toString(),
+        source: err.source || source,
+        lineno: err.line,
+        colno: err.column,
+        error: JSON.stringify(err)
     }
     window.webkit.messageHandlers.onError.postMessage(
         serialize(data)

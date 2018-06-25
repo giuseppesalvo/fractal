@@ -70,7 +70,12 @@ class ConsoleMessage: Equatable {
         case .error:
             guard let dict    = data as? [String: Any] else { return "error" }
             guard let message = dict["message"]        else { return "error" }
-            return self.describeDataRemovingFirstArray(data: message)
+            return """
+            \(describeData(message))
+            line: \(describeData(dict["lineno"] ?? "undefined"))
+            column: \(describeData(dict["colno"] ?? "undefined"))
+            source: \(describeData(dict["source"] ?? "undefined").split(separator: "/").last!)
+            """
         default:
             return self.describeDataRemovingFirstArray(data: data)
         }
