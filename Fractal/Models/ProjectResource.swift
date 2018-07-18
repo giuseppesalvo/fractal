@@ -9,9 +9,9 @@ import Cocoa
 
 class ProjectResource: Equatable, Hashable {
     
-    var name: String
-    let originalPath: String
-    let basePath: String
+    var name         : String
+    let originalPath : String
+    let basePath     : String
     
     var hashValue: Int {
         return self.path.hashValue
@@ -64,8 +64,8 @@ class ProjectResource: Equatable, Hashable {
         self.name = newname
         return try FileManager.default.moveItem(atPath: oldpath, toPath: self.path)
     }
-    
-    static func == (lhs: ProjectResource, rhs: ProjectResource) -> Bool {
-        return lhs.hashValue == rhs.hashValue
-    }
+}
+
+func == (lhs: ProjectResource, rhs: ProjectResource) -> Bool {
+    return lhs.hashValue == rhs.hashValue
 }

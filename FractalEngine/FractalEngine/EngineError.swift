@@ -1,6 +1,7 @@
 //
 //  Errors.swift
-//  FractalEngine//  Copyright © 2018 Giuseppe Salvo. All rights reserved.
+//  FractalEngine
+//  Copyright © 2018 Giuseppe Salvo. All rights reserved.
 //
 
 struct EngineError: Error, CustomStringConvertible {
@@ -13,8 +14,8 @@ struct EngineError: Error, CustomStringConvertible {
         case bundleCannotBeLoaded
     }
     
-    let what: What
-    let value: Any?
+    let what  : What
+    let value : Any?
     
     var description: String {
         return "\(what): \(String(describing: value))"

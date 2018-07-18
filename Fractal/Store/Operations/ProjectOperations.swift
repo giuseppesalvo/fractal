@@ -7,6 +7,9 @@
 import ReSwift
 import Zip
 
+// Refactor, refactor
+// Too much responsibilities here
+
 struct ProjectOperation {
     let store: Store<State>
     
@@ -26,6 +29,9 @@ struct ProjectOperation {
     }
     
     func readProject(name: String, data: Data) throws {
+        
+        Zip.addCustomFileExtension(Constant.AppExt)
+        
         let uuid       = UUID().uuidString
         let path       = Constant.TempDir + "/" + uuid
         let zipPath    = URL(fileURLWithPath: path + ".zip")
@@ -52,6 +58,9 @@ struct ProjectOperation {
     }
     
     func projectToData() throws -> Data {
+        
+        Zip.addCustomFileExtension(Constant.AppExt)
+        
         store.dispatch( WriteTabs() )
         
         let uuid = UUID().uuidString
@@ -74,7 +83,42 @@ struct ProjectOperation {
         }
     }
     
-    func compileProject() {
+    func compileProject() throws {
+        store.dispatch(StopCurrentBuild())
+        store.dispatch(StartBuilding())
+        store.dispatch(WriteTabs())
+        store.dispatch(ClearConsole())
         
+        let  state = store.state!
+        
+        do {
+            guard let mainEntry = state.project.tabs.main?.path else {
+                throw AppError(.generic, value: "Main tab not specified")
+            }
+            
+            let (bundle, duration) = try CompileProject(
+                mainEntryPath: mainEntry,
+                libraries: state.project.libraries.instances.map { $0.name },
+                librariesPath: state.project.libraries.path.components(separatedBy: "/").last!
+            )
+            
+            store.dispatch(
+                CreateBuildFromProject(
+                    path: state.project.info.tempUrl,
+                    code: bundle,
+                    duration: duration
+                )
+            )
+            
+        } catch {
+            
+            store.dispatch(ShowConsole())
+            
+            store.dispatch(
+                NewConsoleMessage(
+                    data: [ "message" : String(describing: error) ], messageType: .error
+                )
+            )
+        }
     }
 }

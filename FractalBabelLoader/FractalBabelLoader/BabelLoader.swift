@@ -1,6 +1,7 @@
 //
 //  Loader.swift
-//  FractalBabelLoader//  Copyright © 2018 Giuseppe Salvo. All rights reserved.
+//  FractalBabelLoader
+//  Copyright © 2018 Giuseppe Salvo. All rights reserved.
 //
 
 import Foundation
@@ -18,15 +19,15 @@ class BabelLoader: EngineLoader {
     let defaultOpts : String = "{ presets: ['es2015'] }"
     
     required init() {
-        firtInit()
+        firstInit()
     }
     
     required init(options: Any) {
         self.options = options
-        firtInit()
+        firstInit()
     }
     
-    func firtInit() {
+    func firstInit() {
         _ = try? transpileCode(code: "var __test_initial_loader_text__ = 'Hello World'")
     }
     

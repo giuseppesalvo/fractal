@@ -15,8 +15,8 @@ struct AddResource: Action {
 }
 
 struct RenameResource: Action {
-    let resource: ProjectResource
-    let newname: String
+    let resource : ProjectResource
+    let newname  : String
 }
 
 struct DeleteResource: Action {

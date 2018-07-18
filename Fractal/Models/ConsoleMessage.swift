@@ -28,10 +28,6 @@ class ConsoleMessage: Equatable {
         self.maxLength   = maxLength
     }
     
-    static func == (lhs: ConsoleMessage, rhs: ConsoleMessage) -> Bool {
-        return lhs.description == rhs.description
-    }
-    
     func describeData(_ data: Any) -> String {
       
         switch data {
@@ -102,4 +98,8 @@ class ConsoleMessage: Equatable {
         self.isOutOfBounds = false
         return described
     }
+}
+
+func == (lhs: ConsoleMessage, rhs: ConsoleMessage) -> Bool {
+    return lhs.description == rhs.description
 }

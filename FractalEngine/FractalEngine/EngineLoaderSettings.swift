@@ -1,6 +1,7 @@
 //
 //  EngineLoaderSettings.swift
-//  FractalEngine//  Copyright © 2018 Giuseppe Salvo. All rights reserved.
+//  FractalEngine
+//  Copyright © 2018 Giuseppe Salvo. All rights reserved.
 //
 
 public struct EngineLoaderSettings {

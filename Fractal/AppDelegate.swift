@@ -34,6 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
         // Check if this is the default launch, or the app is opening a document
         let isDefaultLaunch = aNotification.userInfo?[NSApplication.launchIsDefaultUserInfoKey] as? Bool
+      
         if isDefaultLaunch == true {
             
             if !Constant.isDebug {

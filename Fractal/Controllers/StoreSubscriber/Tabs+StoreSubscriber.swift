@@ -24,10 +24,8 @@ extension TabsController: StoreSubscriber {
         
         var different = false
         
-        for (index, tab) in state.enumerated() {
-            if tab.fullName != tabs[index].fullName {
-                different = true
-            }
+        for (index, tab) in state.enumerated() where tab.fullName != tabs[index].fullName {
+            different = true
         }
         
         return different

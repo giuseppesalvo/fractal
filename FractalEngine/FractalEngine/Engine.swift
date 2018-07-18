@@ -36,10 +36,9 @@ import Foundation
  Right now, the algorithm is a bit naive, I should implement incremental builds, threads and caching
  
  1. Threadify
- 2. Caching with timestamps
  3. Incremental build
  4. Exclude files in loaders
- 5. Should I add a shared jscontext?
+ 5. Should I add a lazy shared jscontext?
  */
 
 public class Engine {
@@ -215,6 +214,11 @@ public class Engine {
             .replacingOccurrences(of: "__MODULES__", with: modulesJson)
             .replacingOccurrences(of: "__MAIN_ENTRY__", with: mainFile)
     }
+    
+    /**
+     Parse and compile all modules for all entries
+     - Returns: A dictionary containing all js bundles -> [ entryid: "jsbundle" ]
+     */
     
     public func run() throws -> [String: String] {
         

@@ -64,6 +64,7 @@
 		5D6AFC82201CD81700C84892 /* fractalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6AFC81201CD81700C84892 /* fractalUITests.swift */; };
 		5D6AFC9C201CDBF200C84892 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6AFC9B201CDBF200C84892 /* State.swift */; };
 		5D6AFC9E201CDCCA00C84892 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6AFC9D201CDCCA00C84892 /* AppReducer.swift */; };
+		5D70A5DC20FF7D21007CCFCB /* CompileProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A5DB20FF7D21007CCFCB /* CompileProject.swift */; };
 		5D73F6AD20CE703F00A25D29 /* URL+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D73F6AC20CE703F00A25D29 /* URL+Additions.swift */; };
 		5D73F6B020CE710900A25D29 /* Intro+Themable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D73F6AF20CE710900A25D29 /* Intro+Themable.swift */; };
 		5D73F6B220CE71B100A25D29 /* MainWindow+Themable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D73F6B120CE71B100A25D29 /* MainWindow+Themable.swift */; };
@@ -272,6 +273,7 @@
 		5D6AFC83201CD81700C84892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D6AFC9B201CDBF200C84892 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		5D6AFC9D201CDCCA00C84892 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		5D70A5DB20FF7D21007CCFCB /* CompileProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompileProject.swift; sourceTree = "<group>"; };
 		5D73F6AC20CE703F00A25D29 /* URL+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Additions.swift"; sourceTree = "<group>"; };
 		5D73F6AF20CE710900A25D29 /* Intro+Themable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Intro+Themable.swift"; sourceTree = "<group>"; };
 		5D73F6B120CE71B100A25D29 /* MainWindow+Themable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainWindow+Themable.swift"; sourceTree = "<group>"; };
@@ -497,7 +499,7 @@
 			path = MonacoEditorView;
 			sourceTree = "<group>";
 		};
-		5D1FB2A820889D0100A6CFB4 /* Libraries */ = {
+		5D1FB2A820889D0100A6CFB4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				5D1FB29D2088998800A6CFB4 /* MonacoEditorView */,
@@ -505,8 +507,9 @@
 				5D80053E208CE0EA000588FF /* ThemeManager.swift */,
 				5D76721520A8473300FF8A87 /* SyntaxHighlighter.swift */,
 				5DC6534B20C591550060A762 /* AppError.swift */,
+				5D70A5DB20FF7D21007CCFCB /* CompileProject.swift */,
 			);
-			path = Libraries;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		5D25B4B62038A055005AB8C7 /* Settings */ = {
@@ -517,6 +520,22 @@
 				5D25B4B72038C2CA005AB8C7 /* Helpers.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		5D33372020FF835A001EAC78 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				5DDF40E820DAB5E200A37A63 /* ProjectOperations.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		5D33372120FF8369001EAC78 /* Middlewares */ = {
+			isa = PBXGroup;
+			children = (
+				5D9E465020BD586D0022AE1F /* LoggingMiddleware.swift */,
+			);
+			path = Middlewares;
 			sourceTree = "<group>";
 		};
 		5D6AFC57201CD81600C84892 = {
@@ -554,7 +573,7 @@
 				5D6AFC98201CDBCD00C84892 /* Store */,
 				5D8A7EB720AC4A95002042C9 /* Themes */,
 				5D25B4B62038A055005AB8C7 /* Settings */,
-				5D1FB2A820889D0100A6CFB4 /* Libraries */,
+				5D1FB2A820889D0100A6CFB4 /* Components */,
 				5DBDC737208A567C0068894C /* Resources */,
 			);
 			path = Fractal;
@@ -581,11 +600,11 @@
 		5D6AFC98201CDBCD00C84892 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				5D33372120FF8369001EAC78 /* Middlewares */,
+				5D33372020FF835A001EAC78 /* Operations */,
 				5DA0E8172091C55F0020CF05 /* State */,
 				5D6AFC9A201CDBE300C84892 /* Actions */,
 				5D6AFC99201CDBD500C84892 /* Reducers */,
-				5DDF40E820DAB5E200A37A63 /* ProjectOperations.swift */,
-				5D9E465020BD586D0022AE1F /* LoggingMiddleware.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -1040,6 +1059,7 @@
 				5D73F6C620CE762800A25D29 /* SearchTab+Themable.swift in Sources */,
 				5D68A47D20CC2D5F00DDDB90 /* NSViewCatchEvents.swift in Sources */,
 				5DD827E820CF18EA0025F065 /* Console+DataSource.swift in Sources */,
+				5D70A5DC20FF7D21007CCFCB /* CompileProject.swift in Sources */,
 				5D6AFC66201CD81600C84892 /* EditorController.swift in Sources */,
 				5D73F6D120CE779600A25D29 /* Tabs+StoreSubscriber.swift in Sources */,
 				5D73F6C920CE76D100A25D29 /* MainWindow+StoreSubscriber.swift in Sources */,

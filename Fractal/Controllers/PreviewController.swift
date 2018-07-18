@@ -52,6 +52,10 @@ class PreviewController: NSViewController {
         initLoader()
     }
     
+    override var acceptsFirstResponder: Bool {
+        return true
+    }
+    
     func initResetCounter() {
         // the time is (1 / 60) to avoid to block console logs inside requestAnimationFrame fn
         // 1 / 60 is the duration of a single frame

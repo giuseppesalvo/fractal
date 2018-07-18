@@ -14,14 +14,13 @@ class MainController: CustomViewController {
     @IBOutlet var playgroundSplitView : CustomSplitView!
     @IBOutlet var editorSplitView     : CustomSplitView!
     
-    var overlay             : NSView!
     var addTabController    : AddTabController?
     var searchTabController : SearchTabController?
     var resourcesController : FilesController?
     var consoleController   : ConsoleController?
     var previewController   : PreviewController?
     
-    var minSidePanelWidth: CGFloat = 160
+    var minSidePanelWidth : CGFloat = 160
     
     override func viewDidLoad() {
         
@@ -45,20 +44,6 @@ class MainController: CustomViewController {
         self.searchTabController = self.addChildController(
             withId: ControllerId.SearchTab, toView: self.view
         )
-        
-        //addOverlay()
-    }
-    
-    func addOverlay() {
-        overlay = NSView(frame: self.view.frame)
-        view.addSubview(overlay)
-        overlay.wantsLayer = true
-        overlay.layer?.backgroundColor = themeManager.theme.colors.text.withAlphaComponent(0.2).cgColor
-        overlay.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        overlay.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        overlay.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        overlay.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        overlay.isHidden = true
     }
 }
 

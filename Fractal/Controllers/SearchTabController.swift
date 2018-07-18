@@ -13,11 +13,11 @@ class SearchTabController: NSViewController {
     @IBOutlet var tableView: NSTableView!
     @IBOutlet var textView: TextFieldView!
     
-    var tabs        : [ProjectTab] = []
-    var filteredTabs: [ProjectTab] = []
-    var selectedRow = 0
+    var tabs         : [ProjectTab] = []
+    var filteredTabs : [ProjectTab] = []
     
-    var popupHeightConstraint: NSLayoutConstraint?
+    var selectedRow = 0
+    var popupHeightConstraint : NSLayoutConstraint?
     
     var visible: Bool! {
         willSet(val) {

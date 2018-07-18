@@ -9,15 +9,15 @@ import ReSwift
 
 class ConsoleController: NSViewController {
     
-    @IBOutlet var tableView: NSTableView!
-    @IBOutlet var evalView: NSViewBordable!
-    @IBOutlet var headerView: NSViewBordable!
-    @IBOutlet var evalTextView: CustomTextView!
-    @IBOutlet var headerLbl: NSTextField!
-    @IBOutlet var textView: NSTextView!
-    @IBOutlet var evalArrowLbl: NSTextField!
-    @IBOutlet var trashBtn: BouncyButton!
-    @IBOutlet var closeBtn: BouncyButton!
+    @IBOutlet var tableView    : NSTableView!
+    @IBOutlet var evalView     : NSViewBordable!
+    @IBOutlet var headerView   : NSViewBordable!
+    @IBOutlet var evalTextView : CustomTextView!
+    @IBOutlet var headerLbl    : NSTextField!
+    @IBOutlet var textView     : NSTextView!
+    @IBOutlet var evalArrowLbl : NSTextField!
+    @IBOutlet var trashBtn     : BouncyButton!
+    @IBOutlet var closeBtn     : BouncyButton!
     
     var messages: [ConsoleMessage] = []
     

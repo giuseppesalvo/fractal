@@ -70,6 +70,4 @@ class TabsState {
         guard let active = active else { return nil }
         return self.editing.index(of: active)
     }
-    
-    
 }

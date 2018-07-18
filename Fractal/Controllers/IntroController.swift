@@ -6,7 +6,7 @@ import Cocoa
 
 class IntroController: CustomViewController {
     
-    @IBOutlet var topView: NSViewBordable!
+    @IBOutlet var topView            : NSViewBordable!
     @IBOutlet var tableView          : NSTableView!
     @IBOutlet var newprojectbtn      : IntroButton!
     @IBOutlet var tableViewContainer : NSViewBordable!

@@ -48,4 +48,8 @@ public class PreviewWebView: WKWebView {
         self.window?.makeFirstResponder(self)
         super.mouseUp(with: event)
     }
+    
+    public override var acceptsFirstResponder: Bool {
+        return true
+    }
 }

@@ -181,6 +181,7 @@ extension FilesController: FilesTableCellViewDelegate {
         
         if currentView == .resources, resources.indices.contains(row) {
             let current = resources[row]
+           
             store.dispatch(
                 RenameResource(resource: current, newname: value)
             )

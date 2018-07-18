@@ -26,7 +26,6 @@ extension MainController: StoreSubscriber {
             self.checkFilesView(state: state)
             self.checkConsoleView(state: state)
             self.checkPreviewView(state: state)
-            self.checkOverlay(state: state)
         }
     }
     
@@ -83,10 +82,5 @@ extension MainController: StoreSubscriber {
             )
         }
     }
-    
-    func checkOverlay(state: UIState) {
-        let overlayVisible = overlay?.isHidden == false
-        if overlayVisible == state.mainWindowOverlayVisible { return }
-        overlay?.isHidden = !state.mainWindowOverlayVisible
-    }
+
 }

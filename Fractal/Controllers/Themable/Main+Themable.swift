@@ -18,9 +18,6 @@ extension MainController: Themable {
         view.layer?.backgroundColor = theme.colors.primary.cgColor
         view.window?.backgroundColor = themeManager.theme.colors.primary
         
-        overlay?.wantsLayer = true
-        overlay?.layer?.backgroundColor = theme.colors.text.withAlphaComponent(0.2).cgColor
-        
         mainSplitView.wantsLayer = true
         mainSplitView.layer?.backgroundColor = theme.colors.primary.cgColor
         mainSplitView.needsLayout = true
