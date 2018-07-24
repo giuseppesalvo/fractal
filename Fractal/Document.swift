@@ -11,8 +11,8 @@ import Zip
 class Document: NSDocument {
 
     public var store: Store = Store<State>(
-        reducer: appReducer,
-        state: nil
+        reducer : appReducer,
+        state   : nil
     )
     
     private var mainWindowController    : MainWindowController?

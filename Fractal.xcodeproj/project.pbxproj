@@ -102,12 +102,13 @@
 		5D80DCBD20DA51D800E1FDC0 /* TabsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80DCBC20DA51D800E1FDC0 /* TabsReducer.swift */; };
 		5D80DCBF20DA51E000E1FDC0 /* ResourcesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80DCBE20DA51E000E1FDC0 /* ResourcesReducer.swift */; };
 		5D80DCC120DA51EB00E1FDC0 /* LibrariesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80DCC020DA51EB00E1FDC0 /* LibrariesReducer.swift */; };
-		5D80DCC320DA5AE100E1FDC0 /* ProjectReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80DCC220DA5AE100E1FDC0 /* ProjectReducer.swift */; };
+		5D80DCC320DA5AE100E1FDC0 /* ProjectInfoReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80DCC220DA5AE100E1FDC0 /* ProjectInfoReducer.swift */; };
 		5D8184A920CD9BDE00FE6DB7 /* SearchTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8184A820CD9BDE00FE6DB7 /* SearchTabController.swift */; };
 		5D8715C32043318800B1D483 /* PreviewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8715C22043318800B1D483 /* PreviewWebView.swift */; };
 		5D8E334D20DDAB5400EB0554 /* FractalJsonLoader.fractaloader in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5D8E334B20DDAB3E00EB0554 /* FractalJsonLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5D8E334E20DDAB5600EB0554 /* FractalBabelLoader.fractaloader in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5D8E334920DDAB3600EB0554 /* FractalBabelLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5D8E334F20DDAB5700EB0554 /* FractalRawLoader.fractaloader in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5D8E334720DDAB2D00EB0554 /* FractalRawLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5D92690F21070FF50053654B /* Monaco+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D92690E21070FF50053654B /* Monaco+Utils.swift */; };
 		5D94BDF820BFE723005B4D0A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 5D94BDF720BFE722005B4D0A /* dsa_pub.pem */; };
 		5D9A52C3209EF7B400FCDB34 /* CustomSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A52C2209EF7B400FCDB34 /* CustomSplitView.swift */; };
 		5D9C6A3820C6D0700021BD4B /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9C6A3720C6D0700021BD4B /* CustomTableView.swift */; };
@@ -136,7 +137,7 @@
 		5DC5E51B20B15B6800FC552A /* PreviewWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC5E51A20B15B6800FC552A /* PreviewWindowController.swift */; };
 		5DC6534A20C58CF70060A762 /* templates in Resources */ = {isa = PBXBuildFile; fileRef = 5DC6534920C58CF70060A762 /* templates */; };
 		5DC6534C20C591550060A762 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC6534B20C591550060A762 /* AppError.swift */; };
-		5DC9D7792083881E003F6352 /* ProjectGroupReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9D7782083881E003F6352 /* ProjectGroupReducer.swift */; };
+		5DC9D7792083881E003F6352 /* ProjectReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9D7782083881E003F6352 /* ProjectReducer.swift */; };
 		5DCE556C2096265B00CD5075 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE556B2096265B00CD5075 /* TextFieldView.swift */; };
 		5DCE55702096284E00CD5075 /* TitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE556F2096284E00CD5075 /* TitleTextField.swift */; };
 		5DCE55722096370900CD5075 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE55712096370900CD5075 /* Button.swift */; };
@@ -311,12 +312,13 @@
 		5D80DCBC20DA51D800E1FDC0 /* TabsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsReducer.swift; sourceTree = "<group>"; };
 		5D80DCBE20DA51E000E1FDC0 /* ResourcesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesReducer.swift; sourceTree = "<group>"; };
 		5D80DCC020DA51EB00E1FDC0 /* LibrariesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesReducer.swift; sourceTree = "<group>"; };
-		5D80DCC220DA5AE100E1FDC0 /* ProjectReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectReducer.swift; sourceTree = "<group>"; };
+		5D80DCC220DA5AE100E1FDC0 /* ProjectInfoReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectInfoReducer.swift; sourceTree = "<group>"; };
 		5D8184A820CD9BDE00FE6DB7 /* SearchTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabController.swift; sourceTree = "<group>"; };
 		5D8715C22043318800B1D483 /* PreviewWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewWebView.swift; sourceTree = "<group>"; };
 		5D8E334720DDAB2D00EB0554 /* FractalRawLoader.fractaloader */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FractalRawLoader.fractaloader; path = "../../../../../../Library/Developer/Xcode/DerivedData/Fractal-ectejxgejscfudfwzkdnmgkkuwth/Build/Products/Debug/FractalRawLoader.fractaloader"; sourceTree = "<group>"; };
 		5D8E334920DDAB3600EB0554 /* FractalBabelLoader.fractaloader */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FractalBabelLoader.fractaloader; path = "../../../../../../Library/Developer/Xcode/DerivedData/Fractal-ectejxgejscfudfwzkdnmgkkuwth/Build/Products/Debug/FractalBabelLoader.fractaloader"; sourceTree = "<group>"; };
 		5D8E334B20DDAB3E00EB0554 /* FractalJsonLoader.fractaloader */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FractalJsonLoader.fractaloader; path = "../../../../../../Library/Developer/Xcode/DerivedData/Fractal-ectejxgejscfudfwzkdnmgkkuwth/Build/Products/Debug/FractalJsonLoader.fractaloader"; sourceTree = "<group>"; };
+		5D92690E21070FF50053654B /* Monaco+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Monaco+Utils.swift"; sourceTree = "<group>"; };
 		5D94BDF720BFE722005B4D0A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		5D9A52C2209EF7B400FCDB34 /* CustomSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitView.swift; sourceTree = "<group>"; };
 		5D9BC62420CFCA2100C7109B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -345,7 +347,7 @@
 		5DC5E51A20B15B6800FC552A /* PreviewWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewWindowController.swift; sourceTree = "<group>"; };
 		5DC6534920C58CF70060A762 /* templates */ = {isa = PBXFileReference; lastKnownFileType = folder; path = templates; sourceTree = "<group>"; };
 		5DC6534B20C591550060A762 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		5DC9D7782083881E003F6352 /* ProjectGroupReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectGroupReducer.swift; sourceTree = "<group>"; };
+		5DC9D7782083881E003F6352 /* ProjectReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectReducer.swift; sourceTree = "<group>"; };
 		5DCE556B2096265B00CD5075 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		5DCE556F2096284E00CD5075 /* TitleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextField.swift; sourceTree = "<group>"; };
 		5DCE55712096370900CD5075 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
@@ -495,6 +497,7 @@
 				5D1FB2982088998800A6CFB4 /* MonacoTheme.swift */,
 				5D1FB29A2088998800A6CFB4 /* MonacoWebView.swift */,
 				5D7A6C4020CC4410006D237D /* MonacoError.swift */,
+				5D92690E21070FF50053654B /* Monaco+Utils.swift */,
 			);
 			path = MonacoEditorView;
 			sourceTree = "<group>";
@@ -616,11 +619,11 @@
 				5D3DE8232085EA0F00AB4F9A /* BuildReducer.swift */,
 				5DA0B14C209DAF340033007E /* ConsoleReducer.swift */,
 				5D50D202209718D3007B6A10 /* UIReducer.swift */,
+				5DC9D7782083881E003F6352 /* ProjectReducer.swift */,
+				5D80DCC220DA5AE100E1FDC0 /* ProjectInfoReducer.swift */,
 				5D80DCBC20DA51D800E1FDC0 /* TabsReducer.swift */,
-				5DC9D7782083881E003F6352 /* ProjectGroupReducer.swift */,
 				5D80DCBE20DA51E000E1FDC0 /* ResourcesReducer.swift */,
 				5D80DCC020DA51EB00E1FDC0 /* LibrariesReducer.swift */,
-				5D80DCC220DA5AE100E1FDC0 /* ProjectReducer.swift */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -1036,7 +1039,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D80DCC320DA5AE100E1FDC0 /* ProjectReducer.swift in Sources */,
+				5D80DCC320DA5AE100E1FDC0 /* ProjectInfoReducer.swift in Sources */,
 				5D1FB2A020889A2100A6CFB4 /* MonacoTheme.swift in Sources */,
 				5D9E465120BD586D0022AE1F /* LoggingMiddleware.swift in Sources */,
 				5D80053F208CE0EA000588FF /* ThemeManager.swift in Sources */,
@@ -1070,7 +1073,7 @@
 				5D79F82A20AF798D00B7E566 /* ProjectLibraries.swift in Sources */,
 				5D1FB2A120889A2400A6CFB4 /* MonacoConstants.swift in Sources */,
 				5D50D20720973044007B6A10 /* NSViewController+Additions.swift in Sources */,
-				5DC9D7792083881E003F6352 /* ProjectGroupReducer.swift in Sources */,
+				5DC9D7792083881E003F6352 /* ProjectReducer.swift in Sources */,
 				5D618E4F20976B2B0037004E /* FilesController.swift in Sources */,
 				5D73F6D320CE77AD00A25D29 /* AddTab+StoreSubscriber.swift in Sources */,
 				5D2FDB4420C49937009E698C /* Store+Additions.swift in Sources */,
@@ -1102,6 +1105,7 @@
 				5DDF40EF20DABF3800A37A63 /* NSTableCellViewBordable.swift in Sources */,
 				5D2812DD209F48A100F56091 /* FilesTableCellView.swift in Sources */,
 				5DB1884620936E7800578EFE /* AddTabController.swift in Sources */,
+				5D92690F21070FF50053654B /* Monaco+Utils.swift in Sources */,
 				5D80DCBD20DA51D800E1FDC0 /* TabsReducer.swift in Sources */,
 				5D6AFC64201CD81600C84892 /* AppDelegate.swift in Sources */,
 				5DC168EA20CD277D00F0DF9D /* ProgressIndicator.swift in Sources */,

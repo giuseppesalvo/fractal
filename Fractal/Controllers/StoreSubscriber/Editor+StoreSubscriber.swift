@@ -91,7 +91,7 @@ extension EditorController: StoreSubscriber {
     }
     
     func setEditorStateTo(tab: ProjectTab) -> Promise<Void> {
-        let syntax = getSyntaxByExtension(ext: tab.ext) ?? ""
+        let syntax = MonacoView.syntaxFromFileType(tab.ext) ?? ""
         return self.monacoEditor!.setEditorModel(id: tab.id, defaultText: tab.content, syntax: syntax)
             .then { () -> Promise<Void> in
                 return self.monacoEditor!.setEditorState(state: tab.state)

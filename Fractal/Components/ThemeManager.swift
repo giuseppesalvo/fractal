@@ -12,9 +12,6 @@ class ThemeManager<ThemeType> {
     public  var theme: ThemeType
     private var components = Set<ThemableBox>()
     
-    // static stored properties does not support generic types
-    // static  let shared = ThemeManager<ThemeType>(theme: Themes.light)
-    
     init( theme: ThemeType ) {
         self.theme = theme
     }

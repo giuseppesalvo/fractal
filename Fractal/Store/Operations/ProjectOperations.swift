@@ -92,6 +92,7 @@ struct ProjectOperation {
         let  state = store.state!
         
         do {
+            
             guard let mainEntry = state.project.tabs.main?.path else {
                 throw AppError(.generic, value: "Main tab not specified")
             }

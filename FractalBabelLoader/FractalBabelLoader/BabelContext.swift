@@ -8,9 +8,9 @@ import JavaScriptCore
 class BabelContext {
     
     static let shared = BabelContext()
-    
+
     let context = JSContext()!
-    
+
     let bundle       : Bundle
     let babelPath    : String
     let babelContent : String

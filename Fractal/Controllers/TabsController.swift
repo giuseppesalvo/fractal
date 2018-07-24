@@ -12,10 +12,10 @@ class TabsController: NSViewController {
     @IBOutlet var tabsCollectionView : NSCollectionView!
     @IBOutlet var addTabBtn          : AddTabBtn!
 
-    var activeTab    : ProjectTab?
-    var mainTab      : ProjectTab?
-    var tabs         : [TabsCollectionModel] = []
-    var dragItems    : Set<IndexPath> = []
+    var activeTab  : ProjectTab?
+    var mainTab    : ProjectTab?
+    var tabs       : [TabsCollectionModel] = []
+    var dragItems  : Set<IndexPath> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

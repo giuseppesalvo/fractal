@@ -19,10 +19,10 @@ class PreviewController: NSViewController {
     var build      : Build?
     var isRunning  : Bool = false
     var subscribed : Bool = false
-    var lastConsoleEvaluation: ConsoleEvaluation?
-    var debouncedResetCounter: (() -> Void)?
+    var lastConsoleEvaluation : ConsoleEvaluation?
+    var debouncedResetCounter : (() -> Void)?
     
-    var maxLog     = 1000
+    var maxLog     = 500
     var logCount   = 0
     var logBlocked = false
     

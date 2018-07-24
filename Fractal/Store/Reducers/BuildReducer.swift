@@ -12,6 +12,7 @@ func buildReducer(_ action: Action, state: BuildState?) -> BuildState {
     var newstate: BuildState = state ?? BuildState()
     
     switch action {
+   
     case let act as CreateBuildFromProject:
         newstate.instance = Build(
             path: act.path,

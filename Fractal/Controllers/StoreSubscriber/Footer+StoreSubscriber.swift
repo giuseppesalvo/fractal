@@ -51,7 +51,7 @@ extension FooterController: StoreSubscriber {
         guard let tab = state.active else { return "" }
         let linesCount = tab.content.match(regexp: "(\r\n|[\r\n])".r).count + 1
         let charsCount = tab.content.count
-        let syntax     = getSyntaxByExtension(ext: tab.ext) ?? "N/A"
+        let syntax     = MonacoView.syntaxFromFileType(tab.ext) ?? "N/A"
         return "Lines: \(linesCount)   Chars: \(charsCount)   Syntax: \(syntax)"
     }
     

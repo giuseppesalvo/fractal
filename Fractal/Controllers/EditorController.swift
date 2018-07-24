@@ -43,19 +43,6 @@ class EditorController: NSViewController {
     }
 }
 
-// The extension must not have the point
-func getSyntaxByExtension(ext: String) -> String? {
-    var dict = [
-        "js": "javascript",
-        "json": "json",
-        "glsl": "c",
-        "frag": "c",
-        "vert": "c"
-    ]
-    
-    return dict[ext]
-}
-
 // MARK: Editor Functions
 extension EditorController {
     
@@ -65,7 +52,7 @@ extension EditorController {
             frame: view.frame,
             text: state.project.tabs.active!.content,
             model: state.project.tabs.active!.id,
-            syntax: getSyntaxByExtension(ext: state.project.tabs.active!.ext) ?? "",
+            syntax: MonacoView.syntaxFromFileType(state.project.tabs.active!.ext) ?? "",
             themes: [ Themes.dark.monacoTheme, Themes.light.monacoTheme ],
             theme: themeManager.theme.monacoTheme.name,
             editorBackgroundColor: themeManager.theme.colors.primary.toHexString()
