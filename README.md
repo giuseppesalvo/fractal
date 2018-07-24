@@ -11,7 +11,7 @@ Fractal is a macOS app that will help you make Javascript WebGL/canvas prototype
 
 There are 4 templates available right now, you can choose one of them, or create a blank project.
 
-Templates:
+**Templates:**
 - Pixi.js
 - p5.js
 - Three.js
