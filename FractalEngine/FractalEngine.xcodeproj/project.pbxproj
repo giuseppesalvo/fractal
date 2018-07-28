@@ -10,6 +10,9 @@
 		5D565FB720C314CD00EBF958 /* RegExp+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D565FB620C314CD00EBF958 /* RegExp+Additions.swift */; };
 		5D565FB920C3150100EBF958 /* EngineLoaderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D565FB820C3150100EBF958 /* EngineLoaderSettings.swift */; };
 		5D639C5620C1CC7800FEC8A1 /* bundle_template.js in Resources */ = {isa = PBXBuildFile; fileRef = 5D639C5520C1CC7800FEC8A1 /* bundle_template.js */; };
+		5D9888F8210B13CC00A62C30 /* EngineResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9888F7210B13CC00A62C30 /* EngineResolver.swift */; };
+		5D9888FA210B592F00A62C30 /* EngineBundler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9888F9210B592F00A62C30 /* EngineBundler.swift */; };
+		5D9888FC210B5E4700A62C30 /* EngineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9888FB210B5E4700A62C30 /* EngineParser.swift */; };
 		5D9BFE6920C283780079A9D1 /* EngineLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE6820C283780079A9D1 /* EngineLoader.swift */; };
 		5D9BFE6B20C283910079A9D1 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE6A20C283910079A9D1 /* String+Additions.swift */; };
 		5D9BFE6D20C283BA0079A9D1 /* EngineSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE6C20C283BA0079A9D1 /* EngineSettings.swift */; };
@@ -35,6 +38,9 @@
 		5D565FB620C314CD00EBF958 /* RegExp+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegExp+Additions.swift"; sourceTree = "<group>"; };
 		5D565FB820C3150100EBF958 /* EngineLoaderSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineLoaderSettings.swift; sourceTree = "<group>"; };
 		5D639C5520C1CC7800FEC8A1 /* bundle_template.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle_template.js; sourceTree = "<group>"; };
+		5D9888F7210B13CC00A62C30 /* EngineResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineResolver.swift; sourceTree = "<group>"; };
+		5D9888F9210B592F00A62C30 /* EngineBundler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineBundler.swift; sourceTree = "<group>"; };
+		5D9888FB210B5E4700A62C30 /* EngineParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineParser.swift; sourceTree = "<group>"; };
 		5D9BFE6820C283780079A9D1 /* EngineLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineLoader.swift; sourceTree = "<group>"; };
 		5D9BFE6A20C283910079A9D1 /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		5D9BFE6C20C283BA0079A9D1 /* EngineSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineSettings.swift; sourceTree = "<group>"; };
@@ -91,8 +97,11 @@
 			children = (
 				5DFCDD8420C1AD0F0063783C /* FractalEngine.h */,
 				5DFCDD9B20C1AD1C0063783C /* Engine.swift */,
-				5D9BFE6820C283780079A9D1 /* EngineLoader.swift */,
 				5D9BFE6C20C283BA0079A9D1 /* EngineSettings.swift */,
+				5D9888F7210B13CC00A62C30 /* EngineResolver.swift */,
+				5D9888FB210B5E4700A62C30 /* EngineParser.swift */,
+				5D9888F9210B592F00A62C30 /* EngineBundler.swift */,
+				5D9BFE6820C283780079A9D1 /* EngineLoader.swift */,
 				5D565FB820C3150100EBF958 /* EngineLoaderSettings.swift */,
 				5D9BFE6E20C283C60079A9D1 /* EngineError.swift */,
 				5D9BFE6A20C283910079A9D1 /* String+Additions.swift */,
@@ -229,8 +238,11 @@
 				5D9BFE6920C283780079A9D1 /* EngineLoader.swift in Sources */,
 				5D9BFE6F20C283C60079A9D1 /* EngineError.swift in Sources */,
 				5D9BFE6B20C283910079A9D1 /* String+Additions.swift in Sources */,
+				5D9888FA210B592F00A62C30 /* EngineBundler.swift in Sources */,
 				5D9BFE6D20C283BA0079A9D1 /* EngineSettings.swift in Sources */,
 				5DFCDD9C20C1AD1C0063783C /* Engine.swift in Sources */,
+				5D9888FC210B5E4700A62C30 /* EngineParser.swift in Sources */,
+				5D9888F8210B13CC00A62C30 /* EngineResolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

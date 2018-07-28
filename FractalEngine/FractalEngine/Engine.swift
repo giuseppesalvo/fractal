@@ -7,7 +7,7 @@ import Foundation
 
 /**
  This engine will allow you to use require, module.exports and exports, like NodeJS in your files
- *Note: to use es2015 import and exports, you should use babel loader*
+ *Note: for es2015 import and exports, you should use the babel loader*
  
  - Parameter settings: The engine settings
  
@@ -32,218 +32,98 @@ import Foundation
  let bundles = engine.run()
  
  *TODOs*
- 
- Right now, the algorithm is a bit naive, I should implement incremental builds, threads and caching
- 
- 1. Threadify
- 3. Incremental build
- 4. Exclude files in loaders
- 5. Should I add a lazy shared jscontext?
+ 1. Incremental builds
+ 2. Exclude files in loaders
+ 3. Should I add a lazy shared jscontext?
  */
 
-public class Engine {
+public struct Engine {
     
-    public  let settings        : EngineSettings
-    private let bundle          : Bundle
-    private let templatePath    : String
-    private let templateContent : String
+    public  let settings : EngineSettings
     
-    public init( settings: EngineSettings ) {
-        self.bundle          = Bundle(for: Engine.self)
-        self.templatePath    = self.bundle.path(forResource: "bundle_template", ofType: "js")!
-        self.templateContent = try! String(contentsOfFile: templatePath)
-        self.settings        = settings
+    // Needed to resolve all the required modules
+    private let resolver : EngineResolver
+    
+    // Parses the code inside a module using the loaders
+    private let parser   : EngineParser
+    
+    // Creates the javascript bundle
+    private let bundler  : EngineBundler
+    
+    public init(
+        settings : EngineSettings,
+        resolver : EngineResolver? = nil,
+        parser   : EngineParser?   = nil,
+        bundler  : EngineBundler?  = nil
+    ) {
+        self.settings = settings
+        self.resolver = resolver ?? RegexEngineResolver(fileExtensions: settings.fileExtensions)
+        self.parser   = parser   ?? BaseEngineParser(loaders: settings.loaders)
+        self.bundler  = bundler  ?? BaseEngineBundler()
     }
     
     /**
-    Detect the right loader settings based on the file extension regex in settings
-    - Parameter file: String
-    - Returns: EngineLoaderSettings?
-    */
-
-    private func matchLoader( file: String ) -> EngineLoaderSettings? {
-        for loaderSettings in settings.loaders {
-            if loaderSettings.match.test(str: file) {
-                return loaderSettings
-            }
-        }
-        return nil
-    }
-    
-    /**
-     Find all the requires inside a file
-     - Parameter content: the file content
-     - Returns: an array with all the required paths
+     Create and write to disk all the bundles
+     - Returns: a dictionary containing [ entryid: bundle ]
      */
     
-    private func findRequires(content: String) -> [String] {
-       
-        let requires = content
-            .match( regexp: "require\\s*\\(\\s*[\"']([^\"']+)[\"']\\s*\\)".r)
-        
-        let froms = content
-            .match( regexp: "from\\s*[\"']([^\"']+)[\"']".r)
-        
-        let all = requires + froms
-        
-        return all.map {
-            if $0.contains("'") {
-                return String($0.split(separator: "'")[1])
-            } else {
-                return String($0.split(separator: "\"")[1])
-            }
-        }
-    }
-    
-    /**
-     Process the code with the loaders pipeline
-     - Parameter code: the file content
-     - Parameter loader: an array the loaders
-     - Returns: the processed code
-     */
-    
-    func parseCode(context: LoaderContext, loader: [EngineLoader]) throws -> String {
-        let newcontext = try loader.reduce(context) { (ctx, fn) in
-            return try fn.process(context: ctx)
-        }
-        return newcontext.fileContent
-    }
-    
-    /**
-     Normalize a dirty path
-     
-     **Example**
-     
-     *dirty: /Users/someone/Desktop/../hello/./hi//folder*
-
-     *normalized: /Users/someone/hello/hi/folder*
-
-     - Parameter code: the file content
-     - Parameter loader: an array the loaders
-     - Returns: the processed code
-     */
-    
-    func normalizePath(_ path: String) -> String {
-        return URL(fileURLWithPath: path).standardized.path
-    }
-    
-    func resolvePath(_ path: String) throws -> String {
-        let normalized = normalizePath(path)
-        return try addExtensionToFile(normalized)
-    }
-    
-    func normalizeRequires(rawPath: String, realPath: String, content: String) -> String {
-        return content
-            .replacing(regexp: "from\\s*[\"']\(rawPath)[\"']".r, with: "from \"\(realPath)\"")
-            .replacing(regexp: "require\\s*\\(\\s*[\"']\(rawPath)[\"']\\s*\\)".r, with: "require(\"\(realPath)\")")
-    }
-    
-    func addExtensionToFile( _ path: String) throws -> String {
-        if FileManager.default.fileExists(atPath: path) {
-            return path
-        } else {
-            for ext in self.settings.fileExtensions {
-                let pathWithExt = path + "." + ext
-                if FileManager.default.fileExists(atPath: pathWithExt) {
-                    return pathWithExt
-                }
-            }
-        }
-        
-        throw EngineError(.fileNotFound, value: path)
-    }
-    
-    func parseFile(path: String, parsedModules: [String: String] = [:]) throws -> [String: String] {
-        
-        var parsedModules = parsedModules
-        
-        var pathComponents = path.split(separator: "/")
-        pathComponents.removeLast()
-        
-        let workingDir = "/" + pathComponents.joined(separator: "/")
-        
-        if parsedModules.keys.contains(path) {
-            return parsedModules
-        }
-        
+    public func run() throws -> [String: String] {
         do {
-            
-            let fileContent = try String(contentsOfFile: path)
-            let fileInfo    = try FileManager.default.attributesOfItem(atPath: path)
-            
-            let context = LoaderContext(
-                filePath    : path,
-                fileContent : fileContent,
-                modifiedAt  : fileInfo[.modificationDate] as! Date
-            )
-            
-            if let loaderSettings = matchLoader(file: path) {
-                
-                var parsed = try parseCode(context: context, loader: loaderSettings.loader)
-                
-                let requires = findRequires(content: parsed)
-                
-                for require in requires {
-                    let cPath = try resolvePath(workingDir + "/" + require)
-                    parsed = normalizeRequires(rawPath: require, realPath: cPath, content: parsed)
-                    let newParsedModules = try parseFile(path: cPath, parsedModules: parsedModules)
-                
-                    for (key, content) in newParsedModules {
-                        parsedModules[key] = content
-                    }
-                }
-                
-                parsedModules[path] = parsed
-                
-            } else {
-                throw EngineError(.loaderNotFound, value: path)
-            }
-            
+            let output = try self.makeBundles(entries: settings.entries)
+            try writeBundles(bundles: output)
+            return output
         } catch {
             throw error
         }
-        
-        return parsedModules
     }
     
-    private func makeJSBundle(mainFile: String, modules: [String: String]) -> String {
-        let modulesData = try! JSONEncoder().encode(modules)
-        let modulesJson = String(data: modulesData, encoding: .utf8)!
+    /**
+     Create a bundle for every entry
+     - Parameter entries: a dictionary containing [ entryid: path ]
+     */
+    
+    private func makeBundles(entries: [String: String]) throws -> [String: String] {
+        return try entries.mapValues({ path in
+            let modules = try resolveAndParseFile(path: path)
+            return try self.bundler.bundle(entry: path, modules: modules)
+        })
+    }
+    
+    /**
+    Write bundles to disk
+     - Parameter bundles: a dictionary containing [ entryid: bundlecontent ]
+     */
+    
+    private func writeBundles(bundles: [String: String]) throws {
+        guard let writeToFiles = self.settings.writeToFiles else { return }
         
-        return templateContent
-            .replacingOccurrences(of: "__MODULES__", with: modulesJson)
-            .replacingOccurrences(of: "__MAIN_ENTRY__", with: mainFile)
+        for ( entry, content) in bundles where writeToFiles[entry] != nil {
+            FileManager.default.createFile(
+                atPath: writeToFiles[entry]!, contents: content.data(using: .utf8), attributes: nil
+            )
+        }
     }
     
     /**
      Parse and compile all modules for all entries
-     - Returns: A dictionary containing all js bundles -> [ entryid: "jsbundle" ]
+     - Returns: A dictionary containing all parsed modules -> [ modulepath: "parsedconde" ]
      */
     
-    public func run() throws -> [String: String] {
+    private func resolveAndParseFile(path: String) throws -> [String: String] {
         
-        var output: [String: String] = [:]
-        
-        let shouldWriteToFile = self.settings.writeToFiles != nil
-        
-        do {
+        let parsedModules = try resolver.resolve(path: path, onModule: { cPath, fileContent in
             
-            for (entry, path) in settings.entries {
-                let resolvedPath = try resolvePath(path)
-                let modules      = try parseFile(path: resolvedPath)
-                output[entry]    = makeJSBundle(mainFile: resolvedPath, modules: modules)
-                
-                if shouldWriteToFile, let dest = settings.writeToFiles![entry] {
-                    FileManager.default.createFile(
-                        atPath: dest, contents: output[entry]!.data(using: .utf8), attributes: nil
-                    )
-                }
-            }
+            let fileInfo = try FileManager.default.attributesOfItem(atPath: cPath)
             
-        } catch {
-            throw error
-        }
+            let context = LoaderContext(
+                filePath    : cPath,
+                fileContent : fileContent,
+                modifiedAt  : fileInfo[.modificationDate] as! Date
+            )
+            
+            return try self.parser.parse(context: context)
+        })
         
-        return output
+        return parsedModules
     }
 }

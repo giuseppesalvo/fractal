@@ -3,18 +3,18 @@
  * Handler: onConsoleLog
  */
 
-window.onerror = function (message, source, lineno, colno, err) {
+window.addEventListener('error', function (err) {
     const data = {
-        message: err.toString(),
-        source: err.source || source,
-        lineno: err.line,
-        colno: err.column,
-        error: JSON.stringify(err)
+        message : err.toString(),
+        source  : err.source,
+        lineno  : err.line,
+        colno   : err.column,
+        error   : JSON.stringify(err)
     }
     window.webkit.messageHandlers.onError.postMessage(
         serialize(data)
     )
-}
+})
 
 /**
  * Proxying console log

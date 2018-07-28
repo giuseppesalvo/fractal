@@ -44,7 +44,6 @@
 		5D3DE8242085EA0F00AB4F9A /* BuildReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DE8232085EA0F00AB4F9A /* BuildReducer.swift */; };
 		5D3DE8262085EA5200AB4F9A /* BuildActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DE8252085EA5200AB4F9A /* BuildActions.swift */; };
 		5D3EA90B209DB56800CCCC87 /* ConsoleTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3EA90A209DB56800CCCC87 /* ConsoleTableCellView.swift */; };
-		5D3EA90D209E017F00CCCC87 /* project in Resources */ = {isa = PBXBuildFile; fileRef = 5D3EA90C209E017700CCCC87 /* project */; };
 		5D3EA90F209E4B5100CCCC87 /* ConsoleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3EA90E209E4B5100CCCC87 /* ConsoleMessage.swift */; };
 		5D50D2012097148E007B6A10 /* UIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50D2002097148E007B6A10 /* UIState.swift */; };
 		5D50D203209718D3007B6A10 /* UIReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50D202209718D3007B6A10 /* UIReducer.swift */; };
@@ -105,9 +104,9 @@
 		5D80DCC320DA5AE100E1FDC0 /* ProjectInfoReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80DCC220DA5AE100E1FDC0 /* ProjectInfoReducer.swift */; };
 		5D8184A920CD9BDE00FE6DB7 /* SearchTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8184A820CD9BDE00FE6DB7 /* SearchTabController.swift */; };
 		5D8715C32043318800B1D483 /* PreviewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8715C22043318800B1D483 /* PreviewWebView.swift */; };
-		5D8E334D20DDAB5400EB0554 /* FractalJsonLoader.fractaloader in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5D8E334B20DDAB3E00EB0554 /* FractalJsonLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		5D8E334E20DDAB5600EB0554 /* FractalBabelLoader.fractaloader in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5D8E334920DDAB3600EB0554 /* FractalBabelLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		5D8E334F20DDAB5700EB0554 /* FractalRawLoader.fractaloader in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5D8E334720DDAB2D00EB0554 /* FractalRawLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5D8E334D20DDAB5400EB0554 /* FractalJsonLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D8E334B20DDAB3E00EB0554 /* FractalJsonLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5D8E334E20DDAB5600EB0554 /* FractalBabelLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D8E334920DDAB3600EB0554 /* FractalBabelLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5D8E334F20DDAB5700EB0554 /* FractalRawLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D8E334720DDAB2D00EB0554 /* FractalRawLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5D92690F21070FF50053654B /* Monaco+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D92690E21070FF50053654B /* Monaco+Utils.swift */; };
 		5D94BDF820BFE723005B4D0A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 5D94BDF720BFE722005B4D0A /* dsa_pub.pem */; };
 		5D9A52C3209EF7B400FCDB34 /* CustomSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A52C2209EF7B400FCDB34 /* CustomSplitView.swift */; };
@@ -151,6 +150,7 @@
 		5DDF40ED20DABE0200A37A63 /* NSButtonBordable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF40EC20DABE0200A37A63 /* NSButtonBordable.swift */; };
 		5DDF40EF20DABF3800A37A63 /* NSTableCellViewBordable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF40EE20DABF3800A37A63 /* NSTableCellViewBordable.swift */; };
 		5DE07331201E55BB00128634 /* NSView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE07330201E55BB00128634 /* NSView+Additions.swift */; };
+		5DF15E69210BB7E70001D190 /* project in Resources */ = {isa = PBXBuildFile; fileRef = 5D3EA90C209E017700CCCC87 /* project */; };
 		8CF9F8D20DEE73A72DEFEDF7 /* Pods_fractalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC43960FEE2DB94B433A4E8A /* Pods_fractalUITests.framework */; };
 		F8327A4E118D7D2FB83E7505 /* Pods_Fractal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C45FF767800D53AA28ACEAA /* Pods_Fractal.framework */; };
 		F891E2FF78451E9A3A988DF8 /* Pods_owlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61BD232E8487B4996491D9C8 /* Pods_owlTests.framework */; };
@@ -174,16 +174,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5D959A3B20DCE9B700F68D89 /* CopyFiles */ = {
+		5D959A3B20DCE9B700F68D89 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				5D8E334D20DDAB5400EB0554 /* FractalJsonLoader.fractaloader in CopyFiles */,
-				5D8E334E20DDAB5600EB0554 /* FractalBabelLoader.fractaloader in CopyFiles */,
-				5D8E334F20DDAB5700EB0554 /* FractalRawLoader.fractaloader in CopyFiles */,
+				5D8E334D20DDAB5400EB0554 /* FractalJsonLoader.fractaloader in Copy Files */,
+				5D8E334E20DDAB5600EB0554 /* FractalBabelLoader.fractaloader in Copy Files */,
+				5D8E334F20DDAB5700EB0554 /* FractalRawLoader.fractaloader in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5DC308CE20DC3C5C0047FABB /* Embed Frameworks */ = {
@@ -195,6 +196,15 @@
 				5DC308CD20DC3C5C0047FABB /* FractalEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DF15E68210BB6400001D190 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 12;
+			files = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -807,7 +817,8 @@
 				38B5A3ADDF1C7356BC7DC3F3 /* [CP] Embed Pods Frameworks */,
 				5D97061420BE9F5B0004E813 /* ShellScript */,
 				5DC308CE20DC3C5C0047FABB /* Embed Frameworks */,
-				5D959A3B20DCE9B700F68D89 /* CopyFiles */,
+				5D959A3B20DCE9B700F68D89 /* Copy Files */,
+				5DF15E68210BB6400001D190 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -910,8 +921,8 @@
 			files = (
 				5D94BDF820BFE723005B4D0A /* dsa_pub.pem in Resources */,
 				5D80053C208CDF6C000588FF /* Fonts in Resources */,
-				5D3EA90D209E017F00CCCC87 /* project in Resources */,
 				5DBDC73D208A84990068894C /* TabsCollectionItem.xib in Resources */,
+				5DF15E69210BB7E70001D190 /* project in Resources */,
 				5D1FB29E2088999000A6CFB4 /* monaco in Resources */,
 				5D6AFC68201CD81600C84892 /* Assets.xcassets in Resources */,
 				5D6AFC6B201CD81600C84892 /* Main.storyboard in Resources */,

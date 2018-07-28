@@ -52,7 +52,7 @@ func CompileProject( mainEntryPath: String, libraries: [String], librariesPath: 
     let settings = EngineSettings(
         entries: [
             mainName: mainEntryPath,
-            ],
+        ],
         fileExtensions: [ "js", "json" ],
         loaders: [
             EngineLoaderSettings(

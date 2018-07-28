@@ -6,23 +6,20 @@
 
 public struct EngineSettings {
     
-    let entries: [String: String]
-    let writeToFiles: [String: String]?
-    
-    let fileExtensions: [String]
-    
-    let loaders: [EngineLoaderSettings]
+    let entries        : [String: String]
+    let writeToFiles   : [String: String]?
+    let fileExtensions : [String]
+    let loaders        : [EngineLoaderSettings]
     
     public init(
-        entries: [String: String],
-        writeToFiles: [String: String]? = nil,
-        fileExtensions: [String],
-        loaders: [EngineLoaderSettings]
+        entries        : [String: String],
+        writeToFiles   : [String: String]? = nil,
+        fileExtensions : [String],
+        loaders        : [EngineLoaderSettings]
     ) {
-        self.entries      = entries
-        self.writeToFiles = writeToFiles
-        
+        self.entries        = entries
+        self.writeToFiles   = writeToFiles
         self.fileExtensions = fileExtensions
-        self.loaders = loaders
+        self.loaders        = loaders
     }
 }

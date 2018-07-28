@@ -39,16 +39,7 @@ class BabelLoader: EngineLoader {
         let cOptions = opt != nil ? opt! : defaultOpts
         
         let value = BabelContext.shared.context
-            .evaluateScript(
-                """
-                try {
-                    var bab = Babel.transform("\(clean(text: code))", \(cOptions));
-                    bab.code
-                } catch(err) {
-                    throw err
-                }
-                """
-        )
+            .evaluateScript("Babel.transform(\"\(clean(text: code))\", \(cOptions)).code")
         
         if let exception = BabelContext.shared.context.exception {
             BabelContext.shared.context.exception = nil
