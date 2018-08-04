@@ -6,18 +6,17 @@
 import FractalEngine
 
 class JSONLoader: EngineLoader {
-    var name: String = "JSONLoader"
+    var name    : String = "JSONLoader"
+    var options : Any? = nil
     
-    var options: Any?
+    required init() {}
+    required init(options: Any) {
+        self.options = options
+    }
     
     func process(context: LoaderContext) throws -> LoaderContext {
         var newcontext = context
         newcontext.fileContent = "module.exports = " + context.fileContent
         return newcontext
-    }
-    
-    required init() {}
-    required init(options: Any) {
-        self.options = options
     }
 }

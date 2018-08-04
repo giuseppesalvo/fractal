@@ -7,10 +7,12 @@
 import Foundation
 import FractalEngine
 
-struct CachedResult {
-    let content   : String
-    let timestamp : Date
+struct FileAttributes: Hashable {
+    let path: String
+    let timestamp: Date
 }
+
+private var cache: [FileAttributes: String] = [:]
 
 class BabelLoader: EngineLoader {
 
@@ -31,9 +33,6 @@ class BabelLoader: EngineLoader {
         _ = try? transpileCode(code: "var __test_initial_loader_text__ = 'Hello World'")
     }
     
-    // Should write to file system?
-    private var cache: [String: CachedResult] = [:]
-    
     func transpileCode(code: String) throws -> String {
         let opt      = self.options as? String
         let cOptions = opt != nil ? opt! : defaultOpts
@@ -51,35 +50,23 @@ class BabelLoader: EngineLoader {
     
     func process(context: LoaderContext) throws -> LoaderContext {
         
-        let key = context.filePath
+        var newcontext = context
+        let key = FileAttributes(path: context.filePath, timestamp: context.modifiedAt)
         
-        if let cached = checkCache(key: key, timestamp: context.modifiedAt) {
-            var newcontext = context
-            newcontext.fileContent = cached.content
+        if let content = cache[key] {
+            newcontext.fileContent = content
             return newcontext
         }
         
         do {
             let transpiled = try transpileCode(code: context.fileContent)
-            var newcontext = context
             newcontext.fileContent = transpiled
-            
-            cache[key] = CachedResult(
-                content: transpiled,
-                timestamp: context.modifiedAt
-            )
-            
+            cache[key] = transpiled
             return newcontext
         } catch {
             throw error
         }
     }
-    
-    func checkCache(key: String, timestamp: Date) -> CachedResult? {
-        if let cached = cache[key], cached.timestamp == timestamp {
-            return cached
-        }
-        return nil
-    }
+
 }
 

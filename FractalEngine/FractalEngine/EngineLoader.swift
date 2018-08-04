@@ -10,22 +10,12 @@ public struct LoaderContext {
     public let modifiedAt  : Date
 }
 
-public protocol EngineLoader: class {
-    
-    var name: String { get }
-    var options: Any? { get set }
-    
-    func process(context: LoaderContext) throws -> LoaderContext
-    
+public protocol EngineLoader {
+    var name    : String { get }
+    var options : Any?   { get set }
     init()
     init(options: Any)
-}
-
-extension EngineLoader {
-    init(options: Any) {
-        self.init()
-        self.options = options
-    }
+    func process(context: LoaderContext) throws -> LoaderContext
 }
 
 public func EngineLoaderFromBundle(path: String) throws -> EngineLoader.Type {

@@ -110,7 +110,7 @@ extension PreviewController: StoreSubscriber {
     }
     
     func checkJavascriptEvaluation(state: ConsoleState) {
-        guard let last  = state.evaluated.last else { return }
+        guard let last = state.evaluated.last else { return }
         
         if let lastLocal = self.lastConsoleEvaluation, last.createdAt == lastLocal.createdAt {
             return

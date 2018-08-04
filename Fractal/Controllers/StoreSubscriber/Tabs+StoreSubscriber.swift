@@ -55,8 +55,6 @@ extension TabsController: StoreSubscriber {
                 }
             }
             
-            print("should reload", shouldReload)
-            
             // After the drag the collection is always reloaded, so we can wait the drag end
             if shouldReload && self.dragItems.count == 0 {
                 self.tabsCollectionView.reloadData()
