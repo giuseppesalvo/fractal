@@ -473,6 +473,7 @@
 				5D73F6C720CE767100A25D29 /* StoreSubscriber */,
 				5D73F6AE20CE70F400A25D29 /* Themable */,
 				5D1F239F20CEB7B7008343BF /* DataSource */,
+				5D618E50209774DB0037004E /* FooterController.swift */,
 				5D24AF6C2083BFB800B598D2 /* IntroController.swift */,
 				5D539B9B20BAA3DF00E0889B /* MainWindowController.swift */,
 				5D301F202092531E00EE38E0 /* MainController.swift */,
@@ -483,7 +484,6 @@
 				5DA82CC0208CFC6400F1A9C3 /* TabsController.swift */,
 				5DB1884520936E7800578EFE /* AddTabController.swift */,
 				5D618E4E20976B2B0037004E /* FilesController.swift */,
-				5D618E50209774DB0037004E /* FooterController.swift */,
 				5DA0B148209D98680033007E /* ConsoleController.swift */,
 				5D8184A820CD9BDE00FE6DB7 /* SearchTabController.swift */,
 			);
@@ -661,9 +661,9 @@
 		5D73F6AE20CE70F400A25D29 /* Themable */ = {
 			isa = PBXGroup;
 			children = (
+				5D73F6B320CE720500A25D29 /* Main+Themable.swift */,
 				5D73F6AF20CE710900A25D29 /* Intro+Themable.swift */,
 				5D73F6B120CE71B100A25D29 /* MainWindow+Themable.swift */,
-				5D73F6B320CE720500A25D29 /* Main+Themable.swift */,
 				5D73F6B520CE72A800A25D29 /* Editor+Themable.swift */,
 				5D73F6B720CE730600A25D29 /* Preview+Themable.swift */,
 				5D73F6B920CE747F00A25D29 /* PreviewWindow+Themable.swift */,

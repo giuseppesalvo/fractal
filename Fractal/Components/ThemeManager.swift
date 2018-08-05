@@ -54,6 +54,7 @@ class ThemeManager<ThemeType> {
     }
 }
 
+// Class for weak references
 protocol AnyThemable: class {
     func defaultSetTheme(theme: Any)
 }

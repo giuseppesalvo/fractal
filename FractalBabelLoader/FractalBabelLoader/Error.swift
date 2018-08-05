@@ -6,7 +6,7 @@
 struct BabelLoaderError: Error, CustomStringConvertible {
     
     enum What {
-        case generic, codeNotValid
+        case generic, codeNotValid, noOptionsDefined
     }
     
     let value: Any

@@ -10,15 +10,15 @@ import FractalEngine
 struct Loaders {
     
     let basePath = Bundle.main.builtInPlugInsURL!
-    var instances: [EngineLoader] = []
+    var instances: [String: EngineLoader] = [:]
     
     init(_ loaders: [String]) throws {
-        instances = try loaders.map {
+        for loader in loaders {
             let path = self.basePath
-                .appendingPathComponent($0)
+                .appendingPathComponent(loader)
                 .appendingPathExtension("fractaloader")
                 .path
-            return try EngineLoaderFromBundle(path: path).init()
+            instances[loader] = try EngineLoaderFromBundle(path: path).init()
         }
     }
 }
@@ -30,6 +30,6 @@ private let loaders = try! Loaders([
     "FractalJsonLoader"
 ])
 
-let babelLoader = loaders.instances.first(where: { $0.name == "BabelLoader" })!
-let jsonLoader  = loaders.instances.first(where: { $0.name == "JSONLoader" })!
-let rawLoader   = loaders.instances.first(where: { $0.name == "RawLoader" })!
+let babelLoader = loaders.instances["FractalBabelLoader"]!
+let jsonLoader  = loaders.instances["FractalJsonLoader"]!
+let rawLoader   = loaders.instances["FractalRawLoader"]!
