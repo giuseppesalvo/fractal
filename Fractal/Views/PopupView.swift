@@ -21,7 +21,7 @@ class PopupView: NSView, Themable {
     func setup() {
         themeManager.register(self)
         let shadow = NSShadow()
-        shadow.shadowColor = NSColor.black.withAlphaComponent(0.35)
+        shadow.shadowColor = NSColor.black.withAlphaComponent(0.1)
         shadow.shadowOffset = CGSize(width: 0, height: -1)
         shadow.shadowBlurRadius = 6
         self.shadow = shadow
@@ -34,6 +34,11 @@ class PopupView: NSView, Themable {
         self.layer?.borderWidth = theme.borderSize
         self.layer?.borderColor = theme.colors.border.cgColor
         self.layer?.backgroundColor = theme.colors.primary.cgColor
+        
+        if let scale = NSScreen.main?.backingScaleFactor {
+            self.layer?.shouldRasterize = true
+            self.layer?.rasterizationScale = scale
+        }
     }
     
     func shake() {

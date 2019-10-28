@@ -21,7 +21,7 @@ DEPENDENCIES:
   - Zip
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - LetsMove
     - PromiseKit
     - ReSwift
@@ -39,4 +39,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 62c1f8723b1d6b9518b56324885f2efa9f2ba9cc
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.3

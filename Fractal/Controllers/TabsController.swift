@@ -23,7 +23,10 @@ class TabsController: NSViewController {
         self.tabsCollectionView.frame.size.height = 32
         self.tabsCollectionView.translatesAutoresizingMaskIntoConstraints = false
         
-        self.tabsCollectionView.registerForDraggedTypes([NSPasteboard.PasteboardType(kUTTypeItem as String)])
+        self.tabsCollectionView.registerForDraggedTypes([
+            NSPasteboard.PasteboardType(kUTTypeItem as String)
+        ])
+        
         self.tabsCollectionView.setDraggingSourceOperationMask(.move, forLocal: true)
     }
     

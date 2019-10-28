@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D4295316F61AEB5B5E4C351 /* Pods_owlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6AA58EF64DDDA0759B86F0 /* Pods_owlUITests.framework */; };
 		2DD5F5CF9FF7E1689B91B23F /* Pods_FractalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71707665FA9CB13E3BBD8D38 /* Pods_FractalUITests.framework */; };
 		50BF9A6E952EFC2698D3003F /* Pods_FractalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060D146D157088E0745B86E1 /* Pods_FractalTests.framework */; };
-		52B1DE97A1D79B23617EE37A /* Pods_fractalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D74E6D76FABC930F3A785D3 /* Pods_fractalTests.framework */; };
+		5D00362A236717D70060C60A /* FractalRawLoader.fractaloader in Resources */ = {isa = PBXBuildFile; fileRef = 5D003629236717D70060C60A /* FractalRawLoader.fractaloader */; };
+		5D00362C236717E20060C60A /* FractalJsonLoader.fractaloader in Resources */ = {isa = PBXBuildFile; fileRef = 5D00362B236717E20060C60A /* FractalJsonLoader.fractaloader */; };
+		5D00362E236717EA0060C60A /* FractalBabelLoader.fractaloader in Resources */ = {isa = PBXBuildFile; fileRef = 5D00362D236717EA0060C60A /* FractalBabelLoader.fractaloader */; };
 		5D00C4F0209B267300A9871C /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D00C4EF209B267300A9871C /* String+Additions.swift */; };
 		5D00C4F2209B6E9A00A9871C /* TableViewDragAndDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D00C4F1209B6E9A00A9871C /* TableViewDragAndDrop.swift */; };
 		5D0503D7208B34070019F740 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0503D6208B34070019F740 /* CustomViewController.swift */; };
@@ -106,9 +107,6 @@
 		5D80DCC320DA5AE100E1FDC0 /* ProjectInfoReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80DCC220DA5AE100E1FDC0 /* ProjectInfoReducer.swift */; };
 		5D8184A920CD9BDE00FE6DB7 /* SearchTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8184A820CD9BDE00FE6DB7 /* SearchTabController.swift */; };
 		5D8715C32043318800B1D483 /* PreviewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8715C22043318800B1D483 /* PreviewWebView.swift */; };
-		5D8E334D20DDAB5400EB0554 /* FractalJsonLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D8E334B20DDAB3E00EB0554 /* FractalJsonLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		5D8E334E20DDAB5600EB0554 /* FractalBabelLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D8E334920DDAB3600EB0554 /* FractalBabelLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		5D8E334F20DDAB5700EB0554 /* FractalRawLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D8E334720DDAB2D00EB0554 /* FractalRawLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5D92690F21070FF50053654B /* Monaco+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D92690E21070FF50053654B /* Monaco+Utils.swift */; };
 		5D94BDF820BFE723005B4D0A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 5D94BDF720BFE722005B4D0A /* dsa_pub.pem */; };
 		5D9A52C3209EF7B400FCDB34 /* CustomSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A52C2209EF7B400FCDB34 /* CustomSplitView.swift */; };
@@ -151,11 +149,12 @@
 		5DDF40EB20DABDF400A37A63 /* NSViewBordable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF40EA20DABDF400A37A63 /* NSViewBordable.swift */; };
 		5DDF40ED20DABE0200A37A63 /* NSButtonBordable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF40EC20DABE0200A37A63 /* NSButtonBordable.swift */; };
 		5DDF40EF20DABF3800A37A63 /* NSTableCellViewBordable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF40EE20DABF3800A37A63 /* NSTableCellViewBordable.swift */; };
+		5DDF490E23674B4B00D34FD3 /* FractalBabelLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D00362D236717EA0060C60A /* FractalBabelLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5DDF490F23674B4D00D34FD3 /* FractalJsonLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D00362B236717E20060C60A /* FractalJsonLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5DDF491023674B4E00D34FD3 /* FractalRawLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D003629236717D70060C60A /* FractalRawLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5DE07331201E55BB00128634 /* NSView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE07330201E55BB00128634 /* NSView+Additions.swift */; };
 		5DF15E69210BB7E70001D190 /* project in Resources */ = {isa = PBXBuildFile; fileRef = 5D3EA90C209E017700CCCC87 /* project */; };
-		8CF9F8D20DEE73A72DEFEDF7 /* Pods_fractalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC43960FEE2DB94B433A4E8A /* Pods_fractalUITests.framework */; };
 		F8327A4E118D7D2FB83E7505 /* Pods_Fractal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C45FF767800D53AA28ACEAA /* Pods_Fractal.framework */; };
-		F891E2FF78451E9A3A988DF8 /* Pods_owlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61BD232E8487B4996491D9C8 /* Pods_owlTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,9 +181,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				5D8E334D20DDAB5400EB0554 /* FractalJsonLoader.fractaloader in Copy Files */,
-				5D8E334E20DDAB5600EB0554 /* FractalBabelLoader.fractaloader in Copy Files */,
-				5D8E334F20DDAB5700EB0554 /* FractalRawLoader.fractaloader in Copy Files */,
+				5DDF490E23674B4B00D34FD3 /* FractalBabelLoader.fractaloader in Copy Files */,
+				5DDF490F23674B4D00D34FD3 /* FractalJsonLoader.fractaloader in Copy Files */,
+				5DDF491023674B4E00D34FD3 /* FractalRawLoader.fractaloader in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +212,6 @@
 
 /* Begin PBXFileReference section */
 		060D146D157088E0745B86E1 /* Pods_FractalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FractalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D74E6D76FABC930F3A785D3 /* Pods_fractalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fractalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F661F6059E3F9B364509B84 /* Pods-fractalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fractalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fractalTests/Pods-fractalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2CF2A86CD2B08EE4B45071E8 /* Pods_fractal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fractal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42056FD272FCF5C92D9878C7 /* Pods-FractalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FractalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FractalUITests/Pods-FractalUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +221,9 @@
 		5ABC67562C72217178274F49 /* Pods-fractal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fractal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fractal/Pods-fractal.debug.xcconfig"; sourceTree = "<group>"; };
 		5B8F347CA449D9E27EAAF939 /* Pods-fractalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fractalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fractalUITests/Pods-fractalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C45FF767800D53AA28ACEAA /* Pods_Fractal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fractal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D003629236717D70060C60A /* FractalRawLoader.fractaloader */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FractalRawLoader.fractaloader; path = "../../../../../../Library/Developer/Xcode/DerivedData/Fractal-ausgokfahboutscyzsalivxysufb/Build/Products/Debug/FractalRawLoader.fractaloader"; sourceTree = "<group>"; };
+		5D00362B236717E20060C60A /* FractalJsonLoader.fractaloader */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FractalJsonLoader.fractaloader; path = "../../../../../../Library/Developer/Xcode/DerivedData/Fractal-ausgokfahboutscyzsalivxysufb/Build/Products/Debug/FractalJsonLoader.fractaloader"; sourceTree = "<group>"; };
+		5D00362D236717EA0060C60A /* FractalBabelLoader.fractaloader */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FractalBabelLoader.fractaloader; path = "../../../../../../Library/Developer/Xcode/DerivedData/Fractal-ausgokfahboutscyzsalivxysufb/Build/Products/Debug/FractalBabelLoader.fractaloader"; sourceTree = "<group>"; };
 		5D00C4EF209B267300A9871C /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		5D00C4F1209B6E9A00A9871C /* TableViewDragAndDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDragAndDrop.swift; sourceTree = "<group>"; };
 		5D0503D6208B34070019F740 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
@@ -272,7 +273,6 @@
 		5D666FE5210FA95E00B2AF55 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		5D666FE7210FA9DB00B2AF55 /* Loaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loaders.swift; sourceTree = "<group>"; };
 		5D68A47C20CC2D5F00DDDB90 /* NSViewCatchEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewCatchEvents.swift; sourceTree = "<group>"; };
-		5D6AA58EF64DDDA0759B86F0 /* Pods_owlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_owlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D6AFC60201CD81600C84892 /* Fractal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fractal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D6AFC63201CD81600C84892 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D6AFC65201CD81600C84892 /* EditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorController.swift; sourceTree = "<group>"; };
@@ -329,9 +329,6 @@
 		5D80DCC220DA5AE100E1FDC0 /* ProjectInfoReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectInfoReducer.swift; sourceTree = "<group>"; };
 		5D8184A820CD9BDE00FE6DB7 /* SearchTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabController.swift; sourceTree = "<group>"; };
 		5D8715C22043318800B1D483 /* PreviewWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewWebView.swift; sourceTree = "<group>"; };
-		5D8E334720DDAB2D00EB0554 /* FractalRawLoader.fractaloader */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FractalRawLoader.fractaloader; path = "../../../../../../Library/Developer/Xcode/DerivedData/Fractal-ectejxgejscfudfwzkdnmgkkuwth/Build/Products/Debug/FractalRawLoader.fractaloader"; sourceTree = "<group>"; };
-		5D8E334920DDAB3600EB0554 /* FractalBabelLoader.fractaloader */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FractalBabelLoader.fractaloader; path = "../../../../../../Library/Developer/Xcode/DerivedData/Fractal-ectejxgejscfudfwzkdnmgkkuwth/Build/Products/Debug/FractalBabelLoader.fractaloader"; sourceTree = "<group>"; };
-		5D8E334B20DDAB3E00EB0554 /* FractalJsonLoader.fractaloader */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FractalJsonLoader.fractaloader; path = "../../../../../../Library/Developer/Xcode/DerivedData/Fractal-ectejxgejscfudfwzkdnmgkkuwth/Build/Products/Debug/FractalJsonLoader.fractaloader"; sourceTree = "<group>"; };
 		5D92690E21070FF50053654B /* Monaco+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Monaco+Utils.swift"; sourceTree = "<group>"; };
 		5D94BDF720BFE722005B4D0A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		5D9A52C2209EF7B400FCDB34 /* CustomSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitView.swift; sourceTree = "<group>"; };
@@ -377,7 +374,6 @@
 		5DE07330201E55BB00128634 /* NSView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Additions.swift"; sourceTree = "<group>"; };
 		5DFCDD9D20C1BF910063783C /* FractalEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FractalEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F2AD3B370A9F13327A7456F /* Pods-owlUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-owlUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-owlUITests/Pods-owlUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		61BD232E8487B4996491D9C8 /* Pods_owlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_owlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71707665FA9CB13E3BBD8D38 /* Pods_FractalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FractalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7211FA59C42233E13F268459 /* Pods-owlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-owlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-owlTests/Pods-owlTests.release.xcconfig"; sourceTree = "<group>"; };
 		89BCEF6688B2E8353DF48ACC /* Pods-owlTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-owlTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-owlTests/Pods-owlTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -389,7 +385,6 @@
 		D465F91268482800C66BE494 /* Pods-owl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-owl.release.xcconfig"; path = "Pods/Target Support Files/Pods-owl/Pods-owl.release.xcconfig"; sourceTree = "<group>"; };
 		D864D9A2E703DACAB38E3E06 /* Pods-fractal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fractal.release.xcconfig"; path = "Pods/Target Support Files/Pods-fractal/Pods-fractal.release.xcconfig"; sourceTree = "<group>"; };
 		E1F09E3E7679909646830F83 /* Pods-owlUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-owlUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-owlUITests/Pods-owlUITests.release.xcconfig"; sourceTree = "<group>"; };
-		FC43960FEE2DB94B433A4E8A /* Pods_fractalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fractalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,8 +401,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F891E2FF78451E9A3A988DF8 /* Pods_owlTests.framework in Frameworks */,
-				52B1DE97A1D79B23617EE37A /* Pods_fractalTests.framework in Frameworks */,
 				50BF9A6E952EFC2698D3003F /* Pods_FractalTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,8 +409,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D4295316F61AEB5B5E4C351 /* Pods_owlUITests.framework in Frameworks */,
-				8CF9F8D20DEE73A72DEFEDF7 /* Pods_fractalUITests.framework in Frameworks */,
 				2DD5F5CF9FF7E1689B91B23F /* Pods_FractalUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,11 +421,7 @@
 			children = (
 				5DFCDD9D20C1BF910063783C /* FractalEngine.framework */,
 				ABC4649004B6A8E32AB0C37C /* Pods_owl.framework */,
-				61BD232E8487B4996491D9C8 /* Pods_owlTests.framework */,
-				5D6AA58EF64DDDA0759B86F0 /* Pods_owlUITests.framework */,
 				2CF2A86CD2B08EE4B45071E8 /* Pods_fractal.framework */,
-				0D74E6D76FABC930F3A785D3 /* Pods_fractalTests.framework */,
-				FC43960FEE2DB94B433A4E8A /* Pods_fractalUITests.framework */,
 				5C45FF767800D53AA28ACEAA /* Pods_Fractal.framework */,
 				060D146D157088E0745B86E1 /* Pods_FractalTests.framework */,
 				71707665FA9CB13E3BBD8D38 /* Pods_FractalUITests.framework */,
@@ -465,6 +452,16 @@
 				5DA8C4E5CC7AA0789D38C98A /* Pods-FractalUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5D003628236717C30060C60A /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				5D00362D236717EA0060C60A /* FractalBabelLoader.fractaloader */,
+				5D00362B236717E20060C60A /* FractalJsonLoader.fractaloader */,
+				5D003629236717D70060C60A /* FractalRawLoader.fractaloader */,
+			);
+			path = Plugins;
 			sourceTree = "<group>";
 		};
 		5D1CE0A5201DF29B00B311CD /* Controllers */ = {
@@ -704,16 +701,6 @@
 			path = Themes;
 			sourceTree = "<group>";
 		};
-		5D9BFEA120C297FE0079A9D1 /* Plugins */ = {
-			isa = PBXGroup;
-			children = (
-				5D8E334B20DDAB3E00EB0554 /* FractalJsonLoader.fractaloader */,
-				5D8E334920DDAB3600EB0554 /* FractalBabelLoader.fractaloader */,
-				5D8E334720DDAB2D00EB0554 /* FractalRawLoader.fractaloader */,
-			);
-			path = Plugins;
-			sourceTree = "<group>";
-		};
 		5DA0E8172091C55F0020CF05 /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -742,13 +729,13 @@
 		5DBDC737208A567C0068894C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5D003628236717C30060C60A /* Plugins */,
 				5D6AFC69201CD81600C84892 /* Main.storyboard */,
 				5D3DE8662086598200AB4F9A /* fractal-Bridging-Header.h */,
 				5D6AFC6C201CD81600C84892 /* Info.plist */,
 				5D6AFC6D201CD81600C84892 /* fractal.entitlements */,
 				5D94BDF720BFE722005B4D0A /* dsa_pub.pem */,
 				5DC308C720DC049E0047FABB /* projecticon.icns */,
-				5D9BFEA120C297FE0079A9D1 /* Plugins */,
 				5DC6534920C58CF70060A762 /* templates */,
 				5D3EA90C209E017700CCCC87 /* project */,
 				5D6AFC67201CD81600C84892 /* Assets.xcassets */,
@@ -926,11 +913,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D94BDF820BFE723005B4D0A /* dsa_pub.pem in Resources */,
+				5D00362A236717D70060C60A /* FractalRawLoader.fractaloader in Resources */,
 				5D80053C208CDF6C000588FF /* Fonts in Resources */,
 				5DBDC73D208A84990068894C /* TabsCollectionItem.xib in Resources */,
 				5DF15E69210BB7E70001D190 /* project in Resources */,
 				5D1FB29E2088999000A6CFB4 /* monaco in Resources */,
 				5D6AFC68201CD81600C84892 /* Assets.xcassets in Resources */,
+				5D00362C236717E20060C60A /* FractalJsonLoader.fractaloader in Resources */,
+				5D00362E236717EA0060C60A /* FractalBabelLoader.fractaloader in Resources */,
 				5D6AFC6B201CD81600C84892 /* Main.storyboard in Resources */,
 				5DC6534A20C58CF70060A762 /* templates in Resources */,
 				5DC308C820DC049E0047FABB /* projecticon.icns in Resources */,
@@ -960,7 +950,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Fractal/Pods-Fractal-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Fractal/Pods-Fractal-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LetsMove/LetsMove.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
@@ -979,7 +969,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fractal/Pods-Fractal-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fractal/Pods-Fractal-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5D97061420BE9F5B0004E813 /* ShellScript */ = {

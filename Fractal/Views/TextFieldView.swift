@@ -116,7 +116,7 @@ class TextFieldView: NSViewBordable {
         
         textFieldHeightAnchor = textField.heightAnchor.constraint(equalToConstant: height)
         textFieldHeightAnchor?.isActive = true
-        textField.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -1).isActive = true
+        textField.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0).isActive = true
         textField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8).isActive = true
         textField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8).isActive = true
         
