@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -354,7 +354,7 @@
                                                 </constraints>
                                                 <buttonCell key="cell" type="bevel" title="⏯" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="BHz-4Q-rb1">
                                                     <behavior key="behavior" lightByContents="YES"/>
-                                                    <font key="font" size="10" name=".AppleColorEmojiUI"/>
+                                                    <font key="font" metaFont="system" size="10"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="runProject:" target="VgV-4q-zGT" id="YHG-8D-ISi"/>
@@ -368,7 +368,7 @@
                                                 </constraints>
                                                 <buttonCell key="cell" type="bevel" title="⏹" alternateTitle="⏹" bezelStyle="rounded" alignment="center" continuous="YES" imageScaling="proportionallyDown" inset="2" id="gzQ-JD-dMl">
                                                     <behavior key="behavior" lightByContents="YES"/>
-                                                    <font key="font" metaFont="label"/>
+                                                    <font key="font" metaFont="system" size="10"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="stopProject:" target="VgV-4q-zGT" id="aeo-Wv-mXp"/>
@@ -1032,17 +1032,17 @@
             <objects>
                 <viewController title="TabsController" storyboardIdentifier="TabsController" id="9Nz-fo-w61" customClass="TabsController" customModule="Fractal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="DpY-qq-47p" customClass="NSViewBordable" customModule="Fractal" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="17"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="0.0" horizontalPageScroll="0.0" verticalLineScroll="0.0" verticalPageScroll="0.0" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="uLo-Oc-plI" customClass="TabsScrollView" customModule="Fractal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="418" height="17"/>
+                                <rect key="frame" x="0.0" y="0.0" width="418" height="16"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="eBB-5f-Rhw">
-                                    <rect key="frame" x="0.0" y="0.0" width="418" height="17"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="418" height="16"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView selectable="YES" id="lbS-8t-qon">
-                                            <rect key="frame" x="0.0" y="0.0" width="418" height="17"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="418" height="16"/>
                                             <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" id="Le1-CQ-lKt">
                                                 <size key="itemSize" width="80" height="32"/>
@@ -1056,17 +1056,17 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.95068685720000001" green="0.95068685720000001" blue="0.95068685720000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" arrowsPosition="none" horizontal="YES" id="I6Q-nv-tcw">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="I6Q-nv-tcw">
                                     <rect key="frame" x="-100" y="-100" width="364" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" arrowsPosition="none" controlSize="mini" horizontal="NO" id="8py-iL-chV">
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" controlSize="mini" horizontal="NO" id="8py-iL-chV">
                                     <rect key="frame" x="-100" y="-100" width="11" height="32"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kOV-eg-Nqu" customClass="AddTabBtn" customModule="Fractal" customModuleProvider="target">
-                                <rect key="frame" x="418" y="0.0" width="32" height="17"/>
+                                <rect key="frame" x="418" y="0.0" width="32" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="TKj-Uh-NGe"/>
                                 </constraints>
@@ -1240,10 +1240,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="592" height="395"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZ7-WX-52U" customClass="PopupView" customModule="Fractal" customModuleProvider="target">
-                                <rect key="frame" x="86" y="118" width="420" height="160"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="TZ7-WX-52U" customClass="PopupView" customModule="Fractal" customModuleProvider="target">
+                                <rect key="frame" x="86" y="139" width="420" height="160"/>
                                 <subviews>
-                                    <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Omm-q6-2EG" customClass="TextFieldView" customModule="Fractal" customModuleProvider="target">
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Omm-q6-2EG" customClass="TextFieldView" customModule="Fractal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="118" width="420" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="Drp-uF-7cx"/>
@@ -1252,13 +1252,13 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Search Tab"/>
                                         </userDefinedRuntimeAttributes>
                                     </customView>
-                                    <scrollView ambiguous="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="42" horizontalPageScroll="10" verticalLineScroll="42" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yN7-dP-9nQ">
+                                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="42" horizontalPageScroll="10" verticalLineScroll="42" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yN7-dP-9nQ">
                                         <rect key="frame" x="0.0" y="0.0" width="420" height="118"/>
-                                        <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="axW-aD-D0Q">
+                                        <clipView key="contentView" drawsBackground="NO" id="axW-aD-D0Q">
                                             <rect key="frame" x="0.0" y="0.0" width="420" height="118"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="42" rowSizeStyle="automatic" viewBased="YES" id="ejA-ey-dtG">
+                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="42" rowSizeStyle="automatic" viewBased="YES" id="ejA-ey-dtG">
                                                     <rect key="frame" x="0.0" y="0.0" width="420" height="118"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1678,13 +1678,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="35" horizontalPageScroll="2" verticalLineScroll="35" verticalPageScroll="2" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fv7-r7-KSu">
-                                <rect key="frame" x="0.0" y="32" width="450" height="236"/>
+                                <rect key="frame" x="0.0" y="32" width="450" height="231"/>
                                 <clipView key="contentView" drawsBackground="NO" id="9lJ-Fk-AcU">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="236"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="231"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="35" rowSizeStyle="automatic" viewBased="YES" id="KLi-CH-9sT">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="236"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="231"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
@@ -1707,7 +1707,7 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField autoresizesSubviews="NO" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Ena-J9-1Cm">
-                                                                    <rect key="frame" x="6" y="8" width="435" height="17"/>
+                                                                    <rect key="frame" x="6" y="8" width="435" height="16"/>
                                                                     <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Multiline Label" id="Ibj-Hm-qiS">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1803,7 +1803,7 @@
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="4k7-0k-7ac" customClass="NSViewBordable" customModule="Fractal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="268" width="450" height="26"/>
+                                <rect key="frame" x="0.0" y="263" width="450" height="26"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cde-f6-xj5">
                                         <rect key="frame" x="6" y="3" width="408" height="18"/>
