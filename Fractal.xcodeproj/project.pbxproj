@@ -106,6 +106,7 @@
 		5D80DCC120DA51EB00E1FDC0 /* LibrariesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80DCC020DA51EB00E1FDC0 /* LibrariesReducer.swift */; };
 		5D80DCC320DA5AE100E1FDC0 /* ProjectInfoReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80DCC220DA5AE100E1FDC0 /* ProjectInfoReducer.swift */; };
 		5D8184A920CD9BDE00FE6DB7 /* SearchTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8184A820CD9BDE00FE6DB7 /* SearchTabController.swift */; };
+		5D8680D023678C3D00C942F3 /* Pods_Fractal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C45FF767800D53AA28ACEAA /* Pods_Fractal.framework */; };
 		5D8715C32043318800B1D483 /* PreviewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8715C22043318800B1D483 /* PreviewWebView.swift */; };
 		5D92690F21070FF50053654B /* Monaco+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D92690E21070FF50053654B /* Monaco+Utils.swift */; };
 		5D94BDF820BFE723005B4D0A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 5D94BDF720BFE722005B4D0A /* dsa_pub.pem */; };
@@ -154,7 +155,6 @@
 		5DDF491023674B4E00D34FD3 /* FractalRawLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D003629236717D70060C60A /* FractalRawLoader.fractaloader */; };
 		5DE07331201E55BB00128634 /* NSView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE07330201E55BB00128634 /* NSView+Additions.swift */; };
 		5DF15E69210BB7E70001D190 /* project in Resources */ = {isa = PBXBuildFile; fileRef = 5D3EA90C209E017700CCCC87 /* project */; };
-		F8327A4E118D7D2FB83E7505 /* Pods_Fractal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C45FF767800D53AA28ACEAA /* Pods_Fractal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -392,8 +392,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8680D023678C3D00C942F3 /* Pods_Fractal.framework in Frameworks */,
 				5DC308CC20DC3C5C0047FABB /* FractalEngine.framework in Frameworks */,
-				F8327A4E118D7D2FB83E7505 /* Pods_Fractal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

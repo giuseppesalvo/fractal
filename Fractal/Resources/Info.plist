@@ -63,15 +63,15 @@
 		<true/>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2018 Giuseppe Salvo. All rights reserved.</string>
+	<string>Copyright © 2019 Giuseppe Salvo. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>SUFeedURL</key>
-	<string>https://fractalapp-9641c.firebaseapp.com/appcast.xml</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>dsa_pub.pem</string>
+	<string>https://fractalplayground.com/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>I3tY4W0vdbc/9gSafVGDoGGGLteEgkAe0wjqMXfRS0A=</string>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
