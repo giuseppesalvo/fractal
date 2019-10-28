@@ -19,7 +19,7 @@ extension MonacoView {
             currentType = String( slice )
         }
         
-        var dict = [
+        let dict = [
             "js"   : "javascript",
             "json" : "json",
             "glsl" : "c",

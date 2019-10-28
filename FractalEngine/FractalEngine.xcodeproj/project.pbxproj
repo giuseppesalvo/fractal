@@ -184,7 +184,7 @@
 				TargetAttributes = {
 					5DFCDD8020C1AD0F0063783C = {
 						CreatedOnToolsVersion = 9.3.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1110;
 					};
 					5DFCDD8920C1AD0F0063783C = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -197,6 +197,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 5DFCDD7720C1AD0F0063783C;
 			productRefGroup = 5DFCDD8220C1AD0F0063783C /* Products */;
@@ -408,7 +409,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -435,7 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fractalapp.FractalEngine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

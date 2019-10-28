@@ -65,7 +65,7 @@ class FilesController: NSViewController {
     }
     
     @IBAction func renameTab(_ sender: Any) {
-        if let tab = activeTab, currentView == .tabs, let row = tabs.index(of: tab) {
+        if let tab = activeTab, currentView == .tabs, let row = tabs.firstIndex(of: tab) {
             if let view = tableView.view(atColumn: 0, row: row, makeIfNecessary: false) as? FilesTableCellView {
                 view.textField?.isEditable = true
                 view.window?.makeFirstResponder(view.textField)

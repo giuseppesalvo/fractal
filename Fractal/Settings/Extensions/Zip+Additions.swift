@@ -9,7 +9,7 @@ import Zip
 
 public extension Zip {
     
-    public static func zipFolder(
+    static func zipFolder(
         path: URL,
         zipFilePath: URL,
         password: String?,

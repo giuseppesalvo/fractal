@@ -48,7 +48,7 @@ class ThemeManager<ThemeType> {
     }
     
     open func unregister(_ component: AnyThemable) {
-        if let index = self.components.index(where: { $0.value === component }) {
+        if let index = self.components.firstIndex(where: { $0.value === component }) {
             self.components.remove(at: index)
         }
     }
@@ -77,18 +77,21 @@ class ThemableBox: Hashable {
     // weak to avoid retain cycles
     weak var value: AnyThemable?
     
-    let identifier: ObjectIdentifier
-    
-    var hashValue: Int {
-        return self.identifier.hashValue
+    func hash(into hasher: inout Hasher) {
+        if let value = self.value {
+            let id = ObjectIdentifier(value)
+            hasher.combine(id)
+        } else {
+            let id = ObjectIdentifier(self)
+            hasher.combine(id)
+        }
     }
     
     init( component: AnyThemable ) {
         self.value = component
-        self.identifier = ObjectIdentifier(self.value!)
     }
     
     static func == (lhs: ThemableBox, rhs: ThemableBox) -> Bool {
-        return lhs.identifier == rhs.identifier
+        return lhs.value === rhs.value
     }
 }

@@ -112,7 +112,7 @@ class ProgressIndicator: NSView {
 
 public extension NSBezierPath {
     
-    public var CGPath: CGPath {
+    var CGPath: CGPath {
         let path = CGMutablePath()
         var points = [CGPoint](repeating: .zero, count: 3)
         for i in 0 ..< self.elementCount {
@@ -124,6 +124,8 @@ public extension NSBezierPath {
                                                                 control1: CGPoint(x: points[0].x, y: points[0].y),
                                                                 control2: CGPoint(x: points[1].x, y: points[1].y) )
             case .closePath: path.closeSubpath()
+            @unknown default:
+                continue
             }
         }
         return path

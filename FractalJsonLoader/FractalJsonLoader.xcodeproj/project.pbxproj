@@ -95,7 +95,7 @@
 				TargetAttributes = {
 					5D778F2920CBBA6B003A2D7F = {
 						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -105,6 +105,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 5D778F2120CBBA6B003A2D7F;
 			productRefGroup = 5D778F2B20CBBA6B003A2D7F /* Products */;
@@ -267,7 +268,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = fractaloader;
 			};
 			name = Debug;
@@ -290,7 +291,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = fractaloader;
 			};
 			name = Release;

@@ -39,7 +39,7 @@ struct LibrariesReducer {
             newstate.instances.append(library)
             library.save()
         case let res as DeleteLibrary:
-            let index = newstate.instances.index(where: { $0.name == res.name })!
+            let index = newstate.instances.firstIndex(where: { $0.name == res.name })!
             let library = newstate.instances[index]
             library.delete()
             newstate.instances.remove(at: index)

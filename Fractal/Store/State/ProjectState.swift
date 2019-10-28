@@ -63,11 +63,11 @@ class TabsState {
     
     var mainIndex: Int? {
         guard let main = main else { return nil }
-        return self.editing.index(of: main)
+        return self.editing.firstIndex(of: main)
     }
     
     var activeIndex: Int? {
         guard let active = active else { return nil }
-        return self.editing.index(of: active)
+        return self.editing.firstIndex(of: active)
     }
 }

@@ -39,7 +39,7 @@ struct ResourcesReducer {
             try? resource.save()
             
         case let res as DeleteResource:
-            let index = newstate.instances.index(where: { $0.name == res.name })!
+            let index = newstate.instances.firstIndex(where: { $0.name == res.name })!
             let resource = newstate.instances[index]
             resource.delete()
             newstate.instances.remove(at: index)

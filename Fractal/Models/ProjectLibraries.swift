@@ -13,8 +13,8 @@ class ProjectLibrary: Equatable, Hashable {
     let originalPath : String
     let basePath     : String
     
-    var hashValue: Int {
-        return self.path.hashValue
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.path)
     }
     
     var path: String {

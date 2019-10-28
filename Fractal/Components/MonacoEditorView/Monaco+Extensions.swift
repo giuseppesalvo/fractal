@@ -113,7 +113,7 @@ public extension MonacoView {
         self.monacoWebView?.loadHTMLString(html, baseURL: baseURL)
     }
     
-    public func focusEditor() {
+    func focusEditor() {
         self.monacoWebView?.window?.makeFirstResponder(self.monacoWebView)
         self.monacoWebView?.evaluateJavaScript("window.editorInstance.focus()", completionHandler: nil)
     }
@@ -123,7 +123,7 @@ public extension MonacoView {
 
 public extension MonacoView {
     
-    public func setText(_ text: String, completition: ((_ error:Error?) -> Void)? = nil ) {
+    func setText(_ text: String, completition: ((_ error:Error?) -> Void)? = nil ) {
         let code  = toJavascriptFunc(fn: JSFunc.setText, arguments: text)
         self.text = text
         
@@ -132,7 +132,7 @@ public extension MonacoView {
         }
     }
     
-    public func setTheme(_ theme: String, backgroundColor: String, completition: ((_ error:Error?) -> Void)? = nil ) {
+    func setTheme(_ theme: String, backgroundColor: String, completition: ((_ error:Error?) -> Void)? = nil ) {
         let code   = "\(JSFunc.setTheme)(`\(theme)`, `\(backgroundColor)`)"
         self.theme = theme
         editorBackgroundColor = backgroundColor
@@ -142,7 +142,7 @@ public extension MonacoView {
         }
     }
 
-    public func getEditorState() -> Promise<String> {
+    func getEditorState() -> Promise<String> {
         let code = "\(JSFunc.getEditorState)()"
         
         return Promise<String> { seal in
@@ -164,7 +164,7 @@ public extension MonacoView {
         }
     }
     
-    public func setEditorState(state: String)  -> Promise<Void> {
+    func setEditorState(state: String)  -> Promise<Void> {
         let code = toJavascriptFunc(fn: JSFunc.setEditorState, arguments: state)
         
         return Promise<Void> { seal in
@@ -183,7 +183,7 @@ public extension MonacoView {
         return toJavascriptFunc(fn: fn, arguments: [arguments])
     }
     
-    public func setEditorModel(id idValue: String, defaultText: String, syntax: String) -> Promise<Void> {
+    func setEditorModel(id idValue: String, defaultText: String, syntax: String) -> Promise<Void> {
 
         let code = toJavascriptFunc(fn: JSFunc.setEditorModel, arguments: [
             idValue,
@@ -201,7 +201,7 @@ public extension MonacoView {
         }
     }
     
-    public func disposeEditorModel(id idValue: String) -> Promise<Void> {
+    func disposeEditorModel(id idValue: String) -> Promise<Void> {
         let code = toJavascriptFunc(fn: JSFunc.disposeEditorModel, arguments: idValue)
         
         return Promise<Void> { seal in

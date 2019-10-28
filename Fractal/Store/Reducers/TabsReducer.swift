@@ -169,7 +169,7 @@ struct TabsReducer {
             $0.name == act.name && $0.ext == act.ext
         }) else { return state }
         
-        guard let index = state.editing.index(of: tab) else {
+        guard let index = state.editing.firstIndex(of: tab) else {
             // this should never happen
             fatalError("error while closing editing tab")
         }
@@ -186,11 +186,11 @@ struct TabsReducer {
     
     func deleteTab(_ act: DeleteTab, state: TabsState ) -> TabsState {
         
-        if let editingIndex = state.editing.index(of: act.tab) {
+        if let editingIndex = state.editing.firstIndex(of: act.tab) {
             state.editing.remove(at: editingIndex)
         }
         
-        if let instancesIndex = state.instances.index(of: act.tab) {
+        if let instancesIndex = state.instances.firstIndex(of: act.tab) {
             state.instances.remove(at: instancesIndex)
         }
         
