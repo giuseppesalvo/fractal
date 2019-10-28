@@ -128,13 +128,13 @@ func throttle1<T>(delay: TimeInterval, queue: DispatchQueue = .main, action: @es
 }
 
 func instantiateViewController<T: NSViewController>(id: String) -> T {
-    let identifier = NSStoryboard.SceneIdentifier(id)
+    let identifier = id
     let controller = NSStoryboard.main?.instantiateController(withIdentifier: identifier) as! T
     return controller
 }
 
 func instantiateWindowController<T: NSWindowController>(id: String) -> T {
-    let identifier = NSStoryboard.SceneIdentifier(id)
+    let identifier = id
     let controller = NSStoryboard.main?.instantiateController(withIdentifier: identifier) as! T
     return controller
 }

@@ -203,7 +203,7 @@ extension FilesController: FilesTableCellViewDelegate {
 }
 
 extension FilesController: NSTextFieldDelegate {
-    override func controlTextDidChange(_ obj: Notification) {
+    func controlTextDidChange(_ obj: Notification) {
         guard let search = obj.object as? NSTextField else { return }
         if search != searchField.textField { return }
 

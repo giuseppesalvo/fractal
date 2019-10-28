@@ -51,7 +51,7 @@ class BouncyButton: NSButton {
         }
         
         transform.isRemovedOnCompletion = false
-        transform.fillMode = kCAFillModeForwards
+        transform.fillMode = CAMediaTimingFillMode.forwards
         //transform.timingFunction = CAMediaTimingFunction.
         return transform
     }
@@ -87,8 +87,8 @@ class BouncyButton: NSButton {
         group.animations = [ scale, translateX, translateY, opacity ]
         group.isRemovedOnCompletion = false
         group.duration = 0.1
-        group.fillMode = kCAFillModeForwards
-        group.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        group.fillMode = CAMediaTimingFillMode.forwards
+        group.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         
         CATransaction.setCompletionBlock({
             then?()
@@ -127,8 +127,8 @@ class BouncyButton: NSButton {
         group.animations = [ scale, translateX, translateY, opacity ]
         group.duration = 0.1
         group.isRemovedOnCompletion = false
-        group.fillMode = kCAFillModeForwards
-        group.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        group.fillMode = CAMediaTimingFillMode.forwards
+        group.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         
         CATransaction.setCompletionBlock({
             then?()

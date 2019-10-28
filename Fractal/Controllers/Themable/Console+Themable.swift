@@ -68,7 +68,7 @@ extension ConsoleController: Themable {
         button.alignment = .center
         button.attributedTitle = theme.icons.attributedString(
             icon, size: size, color: color, attributes: [
-                NSAttributedStringKey.baselineOffset: 1.0
+                NSAttributedString.Key.baselineOffset: 1.0
             ]
         )
         

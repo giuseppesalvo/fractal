@@ -37,10 +37,10 @@ extension TabsController: Themable {
         pstyle.alignment = .center
         
         self.addTabBtn.attributedTitle = NSAttributedString(string: "+", attributes: [
-            NSAttributedStringKey.foregroundColor : theme.colors.accent,
-            NSAttributedStringKey.paragraphStyle : pstyle,
-            NSAttributedStringKey.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h2)!,
-            NSAttributedStringKey.baselineOffset: 1
+            NSAttributedString.Key.foregroundColor : theme.colors.accent,
+            NSAttributedString.Key.paragraphStyle : pstyle,
+            NSAttributedString.Key.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h2)!,
+            NSAttributedString.Key.baselineOffset: 1
         ])
     }
     

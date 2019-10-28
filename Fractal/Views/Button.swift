@@ -80,10 +80,10 @@ class ButtonAccent: Button {
         pstyle.alignment = .center
         
         attributedTitle = NSAttributedString(string: self.title, attributes: [
-            NSAttributedStringKey.foregroundColor : theme.colors.overAccent,
-            NSAttributedStringKey.paragraphStyle : pstyle,
-            NSAttributedStringKey.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h2)!,
-            NSAttributedStringKey.baselineOffset: 1
+            NSAttributedString.Key.foregroundColor : theme.colors.overAccent,
+            NSAttributedString.Key.paragraphStyle : pstyle,
+            NSAttributedString.Key.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h2)!,
+            NSAttributedString.Key.baselineOffset: 1
         ])
     }
     

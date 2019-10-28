@@ -139,7 +139,7 @@ class FilesTableCellView: NSTableCellView {
 }
 
 extension FilesTableCellView: NSTextFieldDelegate {
-    override func controlTextDidEndEditing(_ obj: Notification) {
+    func controlTextDidEndEditing(_ obj: Notification) {
         delegate?.filesTableCellTextDidEndEditing(view: self)
     }
 }

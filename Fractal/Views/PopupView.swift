@@ -91,8 +91,8 @@ class PopupView: NSView, Themable {
         let group = CAAnimationGroup()
         group.animations = [ animationA, animationT ]
         group.duration = self.duration
-        group.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        group.fillMode = kCAFillModeForwards
+        group.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        group.fillMode = CAMediaTimingFillMode.forwards
         group.isRemovedOnCompletion = false
         
         CATransaction.setCompletionBlock({
@@ -118,8 +118,8 @@ class PopupView: NSView, Themable {
         let group = CAAnimationGroup()
         group.animations = [ animationA, animationT ]
         group.duration = self.duration
-        group.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        group.fillMode = kCAFillModeForwards
+        group.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        group.fillMode = CAMediaTimingFillMode.forwards
         group.isRemovedOnCompletion = false
         
         CATransaction.setCompletionBlock({

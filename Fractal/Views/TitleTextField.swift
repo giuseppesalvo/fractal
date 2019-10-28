@@ -29,10 +29,10 @@ class TitleTextField: NSTextField, Themable {
         let pstyle = NSMutableParagraphStyle()
         pstyle.alignment = .left
         self.attributedStringValue = NSAttributedString(string: self.stringValue, attributes: [
-            NSAttributedStringKey.foregroundColor : theme.colors.accent,
-            NSAttributedStringKey.paragraphStyle : pstyle,
-            NSAttributedStringKey.font: NSFont(name: theme.fonts.medium, size: theme.fonts.h2)!,
-            NSAttributedStringKey.baselineOffset: 2
+            NSAttributedString.Key.foregroundColor : theme.colors.accent,
+            NSAttributedString.Key.paragraphStyle : pstyle,
+            NSAttributedString.Key.font: NSFont(name: theme.fonts.medium, size: theme.fonts.h2)!,
+            NSAttributedString.Key.baselineOffset: 2
         ])
     }
     

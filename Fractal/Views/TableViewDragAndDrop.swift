@@ -30,7 +30,7 @@ class TableViewDragAndDrop: CustomTableView {
     func shouldAllowDrag(_ draggingInfo: NSDraggingInfo) -> Bool {
         
         let dragType = NSPasteboard.PasteboardType(rawValue: "NSFilenamesPboardType")
-        guard let board = draggingInfo.draggingPasteboard().propertyList(forType: dragType) as? NSArray else {
+        guard let board = draggingInfo.draggingPasteboard.propertyList(forType: dragType) as? NSArray else {
             return false
         }
         
@@ -55,7 +55,7 @@ class TableViewDragAndDrop: CustomTableView {
         
         var canAccept = false
         
-        let pasteBoard = draggingInfo.draggingPasteboard()
+        let pasteBoard = draggingInfo.draggingPasteboard
         
         if pasteBoard.canReadObject(forClasses: [NSURL.self], options: filteringOptions) {
             canAccept = true
@@ -94,7 +94,7 @@ class TableViewDragAndDrop: CustomTableView {
     override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
         
         isReceivingDrag = false
-        let pasteBoard = sender.draggingPasteboard()
+        let pasteBoard = sender.draggingPasteboard
         
         //let point = convert(sender.draggingLocation(), from: nil)
         

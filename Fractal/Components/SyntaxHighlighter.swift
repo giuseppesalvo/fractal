@@ -8,9 +8,9 @@ import Cocoa
 
 class SyntaxHighlighterRule: NSObject {
     let regexp: NSRegularExpression
-    var attributes: [NSAttributedStringKey: Any] = [:]
+    var attributes: [NSAttributedString.Key: Any] = [:]
     
-    init(regexp: NSRegularExpression, attributes: [NSAttributedStringKey: Any]) {
+    init(regexp: NSRegularExpression, attributes: [NSAttributedString.Key: Any]) {
         self.regexp     = regexp
         self.attributes = attributes
     }
@@ -100,7 +100,7 @@ enum SyntaxHighlighterJSRegexes: String {
 }
 
 class SyntaxHighlighterRuleJS: SyntaxHighlighterRule {
-    init(key: SyntaxHighlighterJSRegexes, attributes: [NSAttributedStringKey: Any]) {
+    init(key: SyntaxHighlighterJSRegexes, attributes: [NSAttributedString.Key: Any]) {
         super.init(regexp: key.rawValue.r, attributes: attributes)
     }
 }

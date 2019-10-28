@@ -96,9 +96,9 @@ class TextFieldView: NSViewBordable {
         
         textField.placeholderAttributedString = NSAttributedString(
             string: self.placeholder, attributes: [
-            NSAttributedStringKey.foregroundColor: placeholderColor,
-            NSAttributedStringKey.font: font,
-            NSAttributedStringKey.paragraphStyle: pstyle
+            NSAttributedString.Key.foregroundColor: placeholderColor,
+            NSAttributedString.Key.font: font,
+            NSAttributedString.Key.paragraphStyle: pstyle
         ])
     }
     

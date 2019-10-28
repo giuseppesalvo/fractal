@@ -70,9 +70,9 @@ class IntroButton: Button {
         let theme = themeManager.theme
         
         self.titleLabel?.attributedStringValue = NSAttributedString(string: value, attributes: [
-            NSAttributedStringKey.foregroundColor: theme.colors.text,
-            NSAttributedStringKey.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h2)!,
-            NSAttributedStringKey.baselineOffset: 1
+            NSAttributedString.Key.foregroundColor: theme.colors.text,
+            NSAttributedString.Key.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h2)!,
+            NSAttributedString.Key.baselineOffset: 1
         ])
     }
     
@@ -88,9 +88,9 @@ class IntroButton: Button {
         setTitle(self.titleLabel.stringValue)
         
         self.plusLabel?.attributedStringValue = NSAttributedString(string: "+", attributes: [
-            NSAttributedStringKey.foregroundColor: theme.colors.text,
-            NSAttributedStringKey.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h2)!,
-            NSAttributedStringKey.baselineOffset: 3
+            NSAttributedString.Key.foregroundColor: theme.colors.text,
+            NSAttributedString.Key.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h2)!,
+            NSAttributedString.Key.baselineOffset: 3
         ])
     }
     

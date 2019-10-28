@@ -271,10 +271,10 @@ extension SegmentControl {
         )
         
         str.draw(in: strRect, withAttributes: [
-            NSAttributedStringKey.font: font,
-            NSAttributedStringKey.foregroundColor: tColor,
-            NSAttributedStringKey.paragraphStyle: pstyle,
-            NSAttributedStringKey.baselineOffset: 0
+            NSAttributedString.Key.font: font,
+            NSAttributedString.Key.foregroundColor: tColor,
+            NSAttributedString.Key.paragraphStyle: pstyle,
+            NSAttributedString.Key.baselineOffset: 0
         ])
     }
 }

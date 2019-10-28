@@ -11,7 +11,7 @@ extension NSViewController {
 
     func createChildController<T: NSViewController>(withId idValue: String) -> T {
         let controller: T = instantiateViewController(id: idValue)
-        self.addChildViewController(controller)
+        self.addChild(controller)
         return controller
     }
     

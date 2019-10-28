@@ -86,7 +86,7 @@ class AddTabController: NSViewController {
         }
         animation.toValue = toValue
         animation.duration = 0.2
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
         popup.layer?.add(animation, forKey: "borderColor")
     }
@@ -123,7 +123,7 @@ class AddTabController: NSViewController {
 }
 
 extension AddTabController: NSTextFieldDelegate {
-    override func controlTextDidChange(_ obj: Notification) {
+    func controlTextDidChange(_ obj: Notification) {
         self.updatePopupBorder()
     }
 }

@@ -73,16 +73,16 @@ struct Icons {
         _ icon: IconType,
         size: CGFloat,
         color: NSColor,
-        attributes: [NSAttributedStringKey:Any] = [:]
+        attributes: [NSAttributedString.Key:Any] = [:]
     ) -> NSAttributedString {
        
         let pstyle = NSMutableParagraphStyle()
             pstyle.alignment = .center
         
         return NSAttributedString(string: icon, attributes: [
-            NSAttributedStringKey.font: self.font(size: size),
-            NSAttributedStringKey.foregroundColor: color,
-            NSAttributedStringKey.paragraphStyle : pstyle
+            NSAttributedString.Key.font: self.font(size: size),
+            NSAttributedString.Key.foregroundColor: color,
+            NSAttributedString.Key.paragraphStyle : pstyle
         ].merging(attributes, uniquingKeysWith: { $1 }))
     }
 }

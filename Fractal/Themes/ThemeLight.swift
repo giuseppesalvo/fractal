@@ -76,36 +76,36 @@ private let icons = Icons(
 private let syntaxHighlighterRules = [
     
     SyntaxHighlighterRuleJS(key: .all, attributes: [
-        NSAttributedStringKey.foregroundColor: colors.text,
-        NSAttributedStringKey.font: NSFont(name: fonts.monospaced, size: fonts.h3)!
+        NSAttributedString.Key.foregroundColor: colors.text,
+        NSAttributedString.Key.font: NSFont(name: fonts.monospaced, size: fonts.h3)!
     ]),
     
     SyntaxHighlighterRuleJS(key: .digits, attributes: [
-        NSAttributedStringKey.foregroundColor: colors.accentSecondary
+        NSAttributedString.Key.foregroundColor: colors.accentSecondary
     ]),
     
     SyntaxHighlighterRuleJS(key: .constants, attributes: [
-        NSAttributedStringKey.foregroundColor: colors.accent
+        NSAttributedString.Key.foregroundColor: colors.accent
     ]),
     
     SyntaxHighlighterRuleJS(key: .keywords, attributes: [
-        NSAttributedStringKey.foregroundColor: colors.accent
+        NSAttributedString.Key.foregroundColor: colors.accent
     ]),
     
     SyntaxHighlighterRuleJS(key: .string, attributes: [
-        NSAttributedStringKey.foregroundColor: NSColor.red
+        NSAttributedString.Key.foregroundColor: NSColor.red
     ]),
     
     SyntaxHighlighterRuleJS(key: .stringTemplate, attributes: [
-        NSAttributedStringKey.foregroundColor: NSColor.red
+        NSAttributedString.Key.foregroundColor: NSColor.red
     ]),
     
     SyntaxHighlighterRuleJS(key: .comments, attributes: [
-        NSAttributedStringKey.foregroundColor: NSColor.systemGreen
+        NSAttributedString.Key.foregroundColor: NSColor.systemGreen
     ]),
 
     SyntaxHighlighterRuleJS(key: .multilineComments, attributes: [
-        NSAttributedStringKey.foregroundColor: NSColor.systemGreen
+        NSAttributedString.Key.foregroundColor: NSColor.systemGreen
     ])
 ]
 

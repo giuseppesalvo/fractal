@@ -149,9 +149,9 @@
 		5DDF40EB20DABDF400A37A63 /* NSViewBordable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF40EA20DABDF400A37A63 /* NSViewBordable.swift */; };
 		5DDF40ED20DABE0200A37A63 /* NSButtonBordable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF40EC20DABE0200A37A63 /* NSButtonBordable.swift */; };
 		5DDF40EF20DABF3800A37A63 /* NSTableCellViewBordable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF40EE20DABF3800A37A63 /* NSTableCellViewBordable.swift */; };
-		5DDF490E23674B4B00D34FD3 /* FractalBabelLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D00362D236717EA0060C60A /* FractalBabelLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		5DDF490F23674B4D00D34FD3 /* FractalJsonLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D00362B236717E20060C60A /* FractalJsonLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		5DDF491023674B4E00D34FD3 /* FractalRawLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D003629236717D70060C60A /* FractalRawLoader.fractaloader */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5DDF490E23674B4B00D34FD3 /* FractalBabelLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D00362D236717EA0060C60A /* FractalBabelLoader.fractaloader */; };
+		5DDF490F23674B4D00D34FD3 /* FractalJsonLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D00362B236717E20060C60A /* FractalJsonLoader.fractaloader */; };
+		5DDF491023674B4E00D34FD3 /* FractalRawLoader.fractaloader in Copy Files */ = {isa = PBXBuildFile; fileRef = 5D003629236717D70060C60A /* FractalRawLoader.fractaloader */; };
 		5DE07331201E55BB00128634 /* NSView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE07330201E55BB00128634 /* NSView+Additions.swift */; };
 		5DF15E69210BB7E70001D190 /* project in Resources */ = {isa = PBXBuildFile; fileRef = 5D3EA90C209E017700CCCC87 /* project */; };
 		F8327A4E118D7D2FB83E7505 /* Pods_Fractal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C45FF767800D53AA28ACEAA /* Pods_Fractal.framework */; };
@@ -872,18 +872,19 @@
 				TargetAttributes = {
 					5D6AFC5F201CD81600C84892 = {
 						CreatedOnToolsVersion = 9.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					5D6AFC71201CD81700C84892 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 5D6AFC5F201CD81600C84892;
 					};
 					5D6AFC7C201CD81700C84892 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 5D6AFC5F201CD81600C84892;
 					};
 				};
 			};
@@ -1349,7 +1350,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "fractal/Resources/fractal-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1373,7 +1374,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "fractal/Resources/fractal-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1386,12 +1387,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PTUNQH4XK3;
-				INFOPLIST_FILE = owlTests/Info.plist;
+				INFOPLIST_FILE = FractalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppesalvo.owlTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppesalvo.fractalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fractal.temp_caseinsensitive_rename.app/Contents/MacOS/Fractal.temp_caseinsensitive_rename";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fractal.app/Contents/MacOS/Fractal";
 			};
 			name = Debug;
 		};
@@ -1404,12 +1406,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PTUNQH4XK3;
-				INFOPLIST_FILE = owlTests/Info.plist;
+				INFOPLIST_FILE = FractalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppesalvo.owlTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppesalvo.fractalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fractal.temp_caseinsensitive_rename.app/Contents/MacOS/Fractal.temp_caseinsensitive_rename";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fractal.app/Contents/MacOS/Fractal";
 			};
 			name = Release;
 		};
@@ -1421,12 +1424,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PTUNQH4XK3;
-				INFOPLIST_FILE = owlUITests/Info.plist;
+				INFOPLIST_FILE = FractalUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppesalvo.owlUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppesalvo.fractalUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = owl;
+				PROVISIONING_PROFILE = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1438,12 +1442,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PTUNQH4XK3;
-				INFOPLIST_FILE = owlUITests/Info.plist;
+				INFOPLIST_FILE = FractalUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppesalvo.owlUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giuseppesalvo.fractalUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = owl;
+				PROVISIONING_PROFILE = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

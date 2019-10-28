@@ -15,10 +15,10 @@ extension FilesController: Themable {
         pstyle.alignment = .center
         
         return NSAttributedString(string: text, attributes: [
-            NSAttributedStringKey.foregroundColor : theme.colors.accent,
-            NSAttributedStringKey.paragraphStyle : pstyle,
-            NSAttributedStringKey.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h4)!,
-            NSAttributedStringKey.baselineOffset: 1
+            NSAttributedString.Key.foregroundColor : theme.colors.accent,
+            NSAttributedString.Key.paragraphStyle : pstyle,
+            NSAttributedString.Key.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h4)!,
+            NSAttributedString.Key.baselineOffset: 1
         ])
     }
     
@@ -34,10 +34,10 @@ extension FilesController: Themable {
         pstyle.alignment = .center
         
         return NSAttributedString(string: text, attributes: [
-            NSAttributedStringKey.foregroundColor : theme.colors.text,
-            NSAttributedStringKey.paragraphStyle : pstyle,
-            NSAttributedStringKey.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h4)!,
-            NSAttributedStringKey.baselineOffset: 1
+            NSAttributedString.Key.foregroundColor : theme.colors.text,
+            NSAttributedString.Key.paragraphStyle : pstyle,
+            NSAttributedString.Key.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h4)!,
+            NSAttributedString.Key.baselineOffset: 1
         ])
     }
     

@@ -39,7 +39,7 @@ extension MainController: StoreSubscriber {
             self.mainSplitView.insertArrangedSubview(self.resourcesController!.view, at: 0)
         } else {
             self.resourcesController?.view.removeFromSuperview()
-            self.resourcesController?.removeFromParentViewController()
+            self.resourcesController?.removeFromParent()
             self.resourcesController = nil
         }
     }
@@ -56,7 +56,7 @@ extension MainController: StoreSubscriber {
             )
         } else {
             self.consoleController?.view.removeFromSuperview()
-            self.consoleController?.removeFromParentViewController()
+            self.consoleController?.removeFromParent()
             self.consoleController = nil
         }
     }
@@ -64,7 +64,7 @@ extension MainController: StoreSubscriber {
     func clearPreviewSplit() {
         guard let preview = self.previewController else { return }
         preview.view.removeFromSuperview()
-        preview.removeFromParentViewController()
+        preview.removeFromParent()
         self.previewController = nil
     }
     
