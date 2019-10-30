@@ -46,7 +46,7 @@ extension FilesController: Themable {
         self.view.layer?.backgroundColor = theme.colors.secondary.cgColor
         
         headerLbl.textColor = theme.colors.text
-        headerLbl.font      = NSFont(name: theme.fonts.medium, size: theme.fonts.h3 )
+        headerLbl.font      = NSFont(name: theme.fonts.medium, size: theme.fonts.h3)
         
         headerView.borderBottomColor = theme.colors.border
         headerView.borderBottomSize  = theme.borderSize
@@ -60,7 +60,9 @@ extension FilesController: Themable {
         searchField.backgroundColor  = theme.colors.secondary
         searchField.placeholderColor = theme.colors.textSecondary
         searchField.textColor        = theme.colors.text
-        searchField.font             = NSFont(name: theme.fonts.regular, size: theme.fonts.h3 * 1.15)!
+        searchField.font             = NSFont(
+            name: theme.fonts.regular, size: theme.fonts.h3 * 1.15
+        )!
         
         placeholderView.wantsLayer = true
         placeholderView.layer?.backgroundColor = theme.colors.secondary.cgColor

@@ -40,7 +40,7 @@ extension TabsController: Themable {
             NSAttributedString.Key.foregroundColor : theme.colors.accent,
             NSAttributedString.Key.paragraphStyle : pstyle,
             NSAttributedString.Key.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h2)!,
-            NSAttributedString.Key.baselineOffset: 1
+            NSAttributedString.Key.baselineOffset: -1
         ])
     }
     

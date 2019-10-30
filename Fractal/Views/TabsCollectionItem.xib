@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,12 +18,12 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MNH-nf-WxO">
-                    <rect key="frame" x="18" y="8" width="52" height="16"/>
+                    <rect key="frame" x="18" y="8" width="52" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="16" id="kWa-kt-wmN"/>
+                        <constraint firstAttribute="height" constant="14" id="kWa-kt-wmN"/>
                     </constraints>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="I2s-Us-XWH">
-                        <font key="font" size="10" name="Roboto-Regular"/>
+                        <font key="font" metaFont="system" size="10"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -47,7 +48,7 @@
                 <constraint firstAttribute="trailing" secondItem="MNH-nf-WxO" secondAttribute="trailing" constant="20" id="avL-Nb-2RW"/>
                 <constraint firstAttribute="trailing" secondItem="BEg-3n-Kfe" secondAttribute="trailing" constant="10" id="dHR-Fm-IyS"/>
                 <constraint firstItem="MNH-nf-WxO" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="gWy-8m-Bd6"/>
-                <constraint firstItem="MNH-nf-WxO" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="o19-Zf-Lti"/>
+                <constraint firstItem="MNH-nf-WxO" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" constant="1" id="o19-Zf-Lti"/>
             </constraints>
             <point key="canvasLocation" x="139" y="120"/>
         </customView>
@@ -60,6 +61,6 @@
         </collectionViewItem>
     </objects>
     <resources>
-        <image name="close" width="64" height="64"/>
+        <image name="close" width="32" height="32"/>
     </resources>
 </document>

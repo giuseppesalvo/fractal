@@ -21,7 +21,7 @@ extension MainWindowController: NSWindowDelegate, Themable {
         setIconToButton(tabsBtn, icon: theme.icons.tabs, size: 14)
         setIconToButton(autoRunBtn, icon: theme.icons.bolt, size: 14)
         setIconToButton(resourcesBtn, icon: theme.icons.file, size: 12)
-        setIconToButton(librariesBtn, icon: theme.icons.lib, size: 12)
+        setIconToButton(librariesBtn, icon: theme.icons.lib, size: 13)
         
         if previewVisible {
             setIconToButton(layoutBtn, icon: theme.icons.windows, size: 15)
