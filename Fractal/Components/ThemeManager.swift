@@ -78,13 +78,8 @@ class ThemableBox: Hashable {
     weak var value: AnyThemable?
     
     func hash(into hasher: inout Hasher) {
-        if let value = self.value {
-            let id = ObjectIdentifier(value)
-            hasher.combine(id)
-        } else {
-            let id = ObjectIdentifier(self)
-            hasher.combine(id)
-        }
+        let id = ObjectIdentifier(self)
+        hasher.combine(id)
     }
     
     init( component: AnyThemable ) {
@@ -92,6 +87,6 @@ class ThemableBox: Hashable {
     }
     
     static func == (lhs: ThemableBox, rhs: ThemableBox) -> Bool {
-        return lhs.value === rhs.value
+        return lhs.value === rhs.value && lhs.hashValue == rhs.hashValue
     }
 }

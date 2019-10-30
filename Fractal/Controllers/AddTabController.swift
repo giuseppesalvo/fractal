@@ -22,6 +22,7 @@ class AddTabController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.textFieldView.textField.target = self
         self.textFieldView.textField.action = #selector(self.addTab)
         self.textFieldView.textField.delegate = self

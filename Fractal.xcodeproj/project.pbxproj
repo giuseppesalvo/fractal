@@ -1338,6 +1338,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = PTUNQH4XK3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1346,6 +1347,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/fractal/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 0.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fractalapp.Fractal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1364,6 +1366,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = PTUNQH4XK3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1372,6 +1375,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/fractal/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 0.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fractalapp.Fractal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

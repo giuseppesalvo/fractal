@@ -72,7 +72,7 @@ class IntroButton: Button {
         self.titleLabel?.attributedStringValue = NSAttributedString(string: value, attributes: [
             NSAttributedString.Key.foregroundColor: theme.colors.text,
             NSAttributedString.Key.font: NSFont(name: theme.fonts.regular, size: theme.fonts.h2)!,
-            NSAttributedString.Key.baselineOffset: 1
+            NSAttributedString.Key.baselineOffset: 0
         ])
     }
     

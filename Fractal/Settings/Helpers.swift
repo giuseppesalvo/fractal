@@ -168,7 +168,7 @@ func instantiateWindowController<T: NSWindowController>(id: String) -> T {
 
 func clean(text: String) -> String {
     return text
-        .replacingOccurrences(of: "\\", with: "\\\\")
+        //.replacingOccurrences(of: "\\", with: "\\\\")
         .replacingOccurrences(of: "\t", with: "\\t")
         .replacingOccurrences(of: "\r", with: "\\r")
         .replacingOccurrences(of: "\n", with: "<systembr>")

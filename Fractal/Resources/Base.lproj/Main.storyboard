@@ -304,8 +304,7 @@
                     <window key="window" title="Project" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" appearanceType="aqua" frameAutosaveName="" animationBehavior="default" tabbingMode="disallowed" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="uz8-Du-ODA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="163" y="198" width="480" height="271"/>
+                        <rect key="contentRect" x="404" y="260" width="480" height="271"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
                         <toolbar key="toolbar" implicitIdentifier="35A5E5C6-7A3F-4252-9618-D7BE9911237F" autosavesConfiguration="NO" allowsUserCustomization="NO" showsBaselineSeparator="NO" displayMode="iconOnly" sizeMode="regular" id="PAw-V1-v5G">
                             <allowedToolbarItems>
@@ -561,6 +560,7 @@
                                 <toolbarItem reference="obp-Ex-mvw"/>
                             </defaultToolbarItems>
                         </toolbar>
+                        <contentBorderThickness minY="0.0" maxY="0.0"/>
                         <connections>
                             <outlet property="delegate" destination="VgV-4q-zGT" id="k6a-DP-N2m"/>
                         </connections>
@@ -733,7 +733,7 @@
                                                     <tableColumns>
                                                         <tableColumn editable="NO" width="448" minWidth="40" maxWidth="10000" id="rf0-16-n8z">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                                                <font key="font" metaFont="message" size="11"/>
+                                                                <font key="font" metaFont="toolTip"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -828,7 +828,7 @@
                                 <rect key="frame" x="0.0" y="232" width="450" height="228"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJy-E0-16y">
-                                        <rect key="frame" x="18" y="74" width="414" height="112"/>
+                                        <rect key="frame" x="18" y="59" width="414" height="112"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="112" id="wUJ-yF-zLW"/>
                                         </constraints>
@@ -887,7 +887,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="iJy-E0-16y" secondAttribute="trailing" constant="20" id="JEQ-og-Br5"/>
                                     <constraint firstAttribute="bottom" secondItem="cc3-2z-UHM" secondAttribute="bottom" constant="16" id="MFy-6Y-Goh"/>
-                                    <constraint firstItem="iJy-E0-16y" firstAttribute="centerY" secondItem="LrR-aj-Ar4" secondAttribute="centerY" constant="-16" id="N6G-bi-zlH"/>
+                                    <constraint firstItem="iJy-E0-16y" firstAttribute="centerY" secondItem="LrR-aj-Ar4" secondAttribute="centerY" constant="-1" id="N6G-bi-zlH"/>
                                     <constraint firstItem="02m-ZP-lhf" firstAttribute="leading" secondItem="LrR-aj-Ar4" secondAttribute="leading" constant="5" id="Og1-xc-Ow5"/>
                                     <constraint firstItem="02m-ZP-lhf" firstAttribute="top" secondItem="LrR-aj-Ar4" secondAttribute="top" constant="6" id="UMN-ZA-rD5"/>
                                     <constraint firstItem="cc3-2z-UHM" firstAttribute="centerX" secondItem="LrR-aj-Ar4" secondAttribute="centerX" id="kX3-v9-yo2"/>
@@ -1266,7 +1266,7 @@
                                                     <tableColumns>
                                                         <tableColumn width="417" minWidth="40" maxWidth="1000" id="owI-Bu-BnF">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                                                <font key="font" metaFont="message" size="11"/>
+                                                                <font key="font" metaFont="toolTip"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -1382,7 +1382,7 @@
                                             <tableColumns>
                                                 <tableColumn editable="NO" width="450" minWidth="40" maxWidth="1000" id="6Jf-Eg-jrh">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                                        <font key="font" metaFont="message" size="11"/>
+                                                        <font key="font" metaFont="toolTip"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1678,20 +1678,20 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="35" horizontalPageScroll="2" verticalLineScroll="35" verticalPageScroll="2" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fv7-r7-KSu">
-                                <rect key="frame" x="0.0" y="32" width="450" height="189"/>
+                                <rect key="frame" x="0.0" y="32" width="450" height="183"/>
                                 <clipView key="contentView" drawsBackground="NO" id="9lJ-Fk-AcU">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="189"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="183"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="35" rowSizeStyle="automatic" viewBased="YES" id="KLi-CH-9sT">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="189"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="183"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn width="447" minWidth="40" maxWidth="10000" id="RB5-G6-oVZ">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                                        <font key="font" metaFont="message" size="11"/>
+                                                        <font key="font" metaFont="toolTip"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1803,7 +1803,7 @@
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="4k7-0k-7ac" customClass="NSViewBordable" customModule="Fractal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="221" width="450" height="26"/>
+                                <rect key="frame" x="0.0" y="215" width="450" height="26"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cde-f6-xj5">
                                         <rect key="frame" x="6" y="4" width="406" height="16"/>
