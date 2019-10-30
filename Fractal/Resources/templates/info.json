@@ -1,14 +1,14 @@
 [
 	{
-		"name": "PIXI.js",
-		"path": "PIXI.fractal",
-		"description": "http://pixijs.download/dev/docs/index.html" 
-	},
-	{
-		"name": "p5.js",
-		"path": "P5.fractal",
-		"description": "https://p5js.org/reference" 
-	},
+        "name": "p5.js",
+        "path": "P5.fractal",
+        "description": "https://p5js.org/reference"
+    },
+    {
+        "name": "PIXI.js",
+        "path": "PIXI.fractal",
+        "description": "http://pixijs.download/dev/docs/index.html"
+    },
 	{
 		"name": "THREE.js",
 		"path": "THREE.fractal",
@@ -18,5 +18,5 @@
 		"name": "Babylon.js",
 		"path": "BABYLON.fractal",
 		"description": "https://doc.babylonjs.com" 
-	},
+	}
 ]
