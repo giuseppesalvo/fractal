@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D68A47720CBBC3B00DDDB90 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D68A47620CBBC3B00DDDB90 /* Utils.swift */; };
 		5D778F5120CBBB9B003A2D7F /* RawLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D778F5020CBBB9B003A2D7F /* RawLoader.swift */; };
 		5D778F5420CBBBC5003A2D7F /* FractalEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D778F5320CBBBC5003A2D7F /* FractalEngine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5D68A47620CBBC3B00DDDB90 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		5D778F4720CBBB4E003A2D7F /* FractalRawLoader.fractaloader */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FractalRawLoader.fractaloader; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D778F4A20CBBB4E003A2D7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D778F5020CBBB9B003A2D7F /* RawLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawLoader.swift; sourceTree = "<group>"; };
@@ -54,7 +52,6 @@
 			children = (
 				5D778F4A20CBBB4E003A2D7F /* Info.plist */,
 				5D778F5020CBBB9B003A2D7F /* RawLoader.swift */,
-				5D68A47620CBBC3B00DDDB90 /* Utils.swift */,
 			);
 			path = FractalRawLoader;
 			sourceTree = "<group>";
@@ -136,7 +133,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D778F5120CBBB9B003A2D7F /* RawLoader.swift in Sources */,
-				5D68A47720CBBC3B00DDDB90 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@ class BabelContext {
         
         bundle = Bundle(for: BabelContext.self)
         
-        babelPath = bundle.path(forResource: "babel.6.26.0.min", ofType: "js")!
+        babelPath = bundle.path(forResource: "babel-v7.6.4.min", ofType: "js")!
         
         babelContent = try! String( contentsOfFile: babelPath )
         

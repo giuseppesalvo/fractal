@@ -6,6 +6,7 @@
 
 import Cocoa
 import ReSwift
+import FractalEngine
 
 extension PreviewController: StoreSubscriber {
     
@@ -118,7 +119,7 @@ extension PreviewController: StoreSubscriber {
         
         self.lastConsoleEvaluation = last
         
-        let cl = clean(text: last.code)
+        let cl = Engine.Utility.clean(text: last.code)
         
         // adding parentesis if the code is not a function or a class
         // This to avoid scopes error in js eval

@@ -49,7 +49,7 @@ public struct RegexEngineResolver: EngineResolver {
         do {
             
             var currentModules = modules
-            var fileContent    = try String(contentsOfFile: path)
+            var fileContent    = try String(contentsOfFile: path, encoding: .utf8)
             
             if onModule != nil {
                 fileContent = try onModule!(path, fileContent)

@@ -11,10 +11,8 @@ public struct LoaderContext {
 }
 
 public protocol EngineLoader {
-    var name    : String { get }
-    var options : Any?   { get set }
+    var name: String { get }
     init()
-    init(options: Any)
     func process(context: LoaderContext) throws -> LoaderContext
 }
 

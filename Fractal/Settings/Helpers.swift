@@ -166,18 +166,6 @@ func instantiateWindowController<T: NSWindowController>(id: String) -> T {
 
 // swiftlint:enable all
 
-func clean(text: String) -> String {
-    return text
-        //.replacingOccurrences(of: "\\", with: "\\\\")
-        .replacingOccurrences(of: "\t", with: "\\t")
-        .replacingOccurrences(of: "\r", with: "\\r")
-        .replacingOccurrences(of: "\n", with: "<systembr>")
-        .replacingOccurrences(of: "\\n", with: "<userbr>")
-        .replacingOccurrences(of: "<userbr>"  , with: "\\\\n")
-        .replacingOccurrences(of: "<systembr>", with: "\\n")
-        .replacing(regexp: "\"".r, with: "\\\\\"") // oh my god
-}
-
 func measure<T>(name: String, block: @escaping () -> T) -> (T, Double) {
     let start = DispatchTime.now().uptimeNanoseconds
     let res: T = block()

@@ -6,18 +6,18 @@
 
 import Foundation
 import FractalEngine
+import JavaScriptCore
 
 class BabelLoader: EngineLoader {
 
     let name    : String = "BabelLoader"
-    var options : Any?
+    var options : [String: Any] = ["presets": ["es2015"]]
     
     required init() {
-        self.options = "{ presets: ['es2015'] }"
         firstInit()
     }
     
-    required init(options: Any) {
+    required init(options: [String: Any]) {
         self.options = options
         firstInit()
     }
@@ -28,12 +28,11 @@ class BabelLoader: EngineLoader {
     }
     
     func transpileCode(code: String) throws -> String {
-        guard let opt = options else {
-            throw BabelLoaderError(.noOptionsDefined, value: "Options are required")
-        }
+        let babel = BabelContext.shared.context.globalObject.forProperty("Babel")
         
-        let value = BabelContext.shared.context
-            .evaluateScript("Babel.transform(\"\(clean(text: code))\", \(opt)).code")
+        let value = babel!.invokeMethod("transform", withArguments: [
+            code, self.options
+        ])!.forProperty("code")
         
         if let exception = BabelContext.shared.context.exception {
             BabelContext.shared.context.exception = nil

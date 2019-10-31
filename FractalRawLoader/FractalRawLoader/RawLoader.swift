@@ -7,18 +7,14 @@
 import FractalEngine
 
 class RawLoader: EngineLoader {
-    let name    : String = "RawLoader"
-    var options : Any?   = nil
+    let name: String = "RawLoader"
     
     required init() {}
-    required init(options: Any) {
-        self.options = options
-    }
     
     func process(context: LoaderContext) throws -> LoaderContext {
         var newcontext = context
-        let escaped    = clean(text: context.fileContent)
-        newcontext.fileContent = "module.exports = \"\(escaped)\""
+        let escaped    = Engine.Utility.clean(text: context.fileContent)
+        newcontext.fileContent = "module.exports = \"" + escaped + "\""
         return newcontext
     }
 }

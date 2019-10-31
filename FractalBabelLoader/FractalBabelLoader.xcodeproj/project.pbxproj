@@ -7,23 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D125F3621161282003BA14C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D125F3521161282003BA14C /* Utils.swift */; };
-		5D9BFE9520C28CB20079A9D1 /* babel.6.26.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 5D9BFE9420C28CB20079A9D1 /* babel.6.26.0.min.js */; };
 		5D9BFE9A20C296010079A9D1 /* BabelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE9920C296010079A9D1 /* BabelLoader.swift */; };
 		5D9BFE9C20C296F30079A9D1 /* BabelContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE9B20C296F30079A9D1 /* BabelContext.swift */; };
 		5D9BFE9E20C297160079A9D1 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BFE9D20C297160079A9D1 /* Error.swift */; };
 		5D9BFEA820C2B1610079A9D1 /* FractalEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9BFE9720C295BB0079A9D1 /* FractalEngine.framework */; };
+		5DC65284236AF2CF008F0163 /* babel-v7.6.4.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 5DC65283236AF2CF008F0163 /* babel-v7.6.4.min.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5D125F3521161282003BA14C /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		5D9BFE8B20C28C6F0079A9D1 /* FractalBabelLoader.fractaloader */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FractalBabelLoader.fractaloader; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D9BFE8E20C28C6F0079A9D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D9BFE9420C28CB20079A9D1 /* babel.6.26.0.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = babel.6.26.0.min.js; sourceTree = "<group>"; };
 		5D9BFE9720C295BB0079A9D1 /* FractalEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FractalEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D9BFE9920C296010079A9D1 /* BabelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabelLoader.swift; sourceTree = "<group>"; };
 		5D9BFE9B20C296F30079A9D1 /* BabelContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabelContext.swift; sourceTree = "<group>"; };
 		5D9BFE9D20C297160079A9D1 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		5DC65283236AF2CF008F0163 /* babel-v7.6.4.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "babel-v7.6.4.min.js"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +56,10 @@
 		5D9BFE8D20C28C6F0079A9D1 /* FractalBabelLoader */ = {
 			isa = PBXGroup;
 			children = (
-				5D125F3521161282003BA14C /* Utils.swift */,
 				5D9BFE9920C296010079A9D1 /* BabelLoader.swift */,
 				5D9BFE9B20C296F30079A9D1 /* BabelContext.swift */,
 				5D9BFE9D20C297160079A9D1 /* Error.swift */,
-				5D9BFE9420C28CB20079A9D1 /* babel.6.26.0.min.js */,
+				5DC65283236AF2CF008F0163 /* babel-v7.6.4.min.js */,
 				5D9BFE8E20C28C6F0079A9D1 /* Info.plist */,
 			);
 			path = FractalBabelLoader;
@@ -134,7 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D9BFE9520C28CB20079A9D1 /* babel.6.26.0.min.js in Resources */,
+				5DC65284236AF2CF008F0163 /* babel-v7.6.4.min.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +145,6 @@
 				5D9BFE9C20C296F30079A9D1 /* BabelContext.swift in Sources */,
 				5D9BFE9E20C297160079A9D1 /* Error.swift in Sources */,
 				5D9BFE9A20C296010079A9D1 /* BabelLoader.swift in Sources */,
-				5D125F3621161282003BA14C /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
