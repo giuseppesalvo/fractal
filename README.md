@@ -17,8 +17,6 @@ There are 4 templates available right now, you can choose one of them, or create
 - Three.js
 - Babylon.js
 
-Fractal is tough to work principally with the canvas, to unleash your imagination, but it can be useful also to test algorithms, and whatever you like.
-
 #### How to use:
 - Open the app
 - Choose a template
@@ -29,7 +27,7 @@ Fractal is tough to work principally with the canvas, to unleash your imaginatio
 - **Libraries:** Javascript libraries that will be added to the html document as a script tag
 - **Resources:** The files that you need to use, such as images. You can find them under the "/resources" path -> "/resources/yourimage.png"
 - You can use import, export, require
-- Webpack specific reatures are not supported, like require.ensure
+- Webpack specific reatures are not supported, like `require.ensure`
 
 #### Supported tab extensions:
 - .js -> transpiled with babel
