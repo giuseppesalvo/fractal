@@ -1,6 +1,6 @@
 # Fractal App
 
-🔥 Make Javascript WebGL/canvas prototypes with ease, without thinking about webpack, babel, folder structure etc.
+Make Javascript WebGL/canvas prototypes with ease, without thinking about webpack, babel, folder structure etc.
 
 ![screenshot](https://github.com/FractalApp/fractal/raw/master/screenshot.png)
 
